@@ -41,8 +41,8 @@ body {
 
 @media (min-width: 640px) and (max-width: 1023px) { /* Tablet: 640px–1023px */
   .custom-curve-bg {
-    background-position: 0 195px; /* Move down a little */
-  }
+    background-position: 0 305px; /* Move down a little */
+  }
 }
 
 @media (min-width: 1024px) { /* Desktop: 1024px+ */
