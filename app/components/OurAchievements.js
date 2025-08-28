@@ -320,7 +320,7 @@ export default function OurAchievements() {
             <div
               className="absolute inset-0 w-full h-full lg:translate-x-"
               style={{
-                backgroundImage: "url(/Snail-img.png)",
+                backgroundImage: "url(/snail-img.png)",
                 backgroundSize: "cover",
                 backgroundPosition: "35% center",
                 backgroundRepeat: "no-repeat",
