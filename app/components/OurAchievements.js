@@ -1,295 +1,6 @@
-// import Image from "next/image";
 
-// export default function OurAchievements() {
-//   return (
-//     <section
-//       className="bg-black text-white relative overflow-hidden"
-//       style={{ backgroundImage: 'url(/galaxy-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '1200px' }}
-//     >
-//       {/* Globe Background */}
-//       <div className="absolute top-12 left-1/2 -translate-x-1/2 z-0 w-full flex justify-center gap-10">
-//         <Image
-//           src="/images/globe-removebg-preview.png"
-//           alt="Globe"
-//           width={900}
-//           height={495}
-//           className="opacity-100 select-none pointer-events-none slow-anticlockwise"
-//           style={{ marginTop: "70px" }}
-//         />
-//       </div>
-      
-//       {/* Achievements */}
-      // <div className="relative z-10 max-w-5xl mx-auto text-center" style={{ marginTop: "-20px" }}>
 
-      //   {/* Title and Description */}
-      //   <div
-      //     style={{
-      //       fontFamily: 'Sora, sans-serif',
-      //       fontWeight: 700,
-      //       fontSize: '54px',
-      //       lineHeight: '100%',
-      //       letterSpacing: '0%'
-      //     }}
-      //     className="mb-6 text-center pt-16 text-white"
-      //   >
-      //     <span>Our </span>
-      //     <span className="bg-gradient-to-r from-white via-gray-400 to-white bg-clip-text text-transparent">Achievements</span>
-      //   </div>
-      //   <div
-      //     style={{
-      //       fontFamily: 'League Spartan, sans-serif',
-      //       fontWeight: 400,
-      //       fontSize: '25px',
-      //       lineHeight: '26.53px',
-      //       letterSpacing: '10%'
-      //     }}
-      //     className="mb-20 text-center text-white"
-      //   >
-      //     We take pride in transforming businesses through impactful <br /> solutions and measurable results.
-      //   </div>
 
-        // <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 lg:gap-12 mb-16 relative" style={{ marginTop: "250px" }}>
-        //   <div className="flex flex-col items-center">
-        //     <div 
-        //       className="text-transparent bg-clip-text"
-        //       style={{
-        //         fontFamily: 'Sora, sans-serif',
-        //         fontWeight: 700,
-        //         fontSize: 'clamp(32px, 5vw, 60px)',
-        //         lineHeight: '100%',
-        //         letterSpacing: '0%',
-        //         background: 'linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)',
-        //         WebkitBackgroundClip: 'text',
-        //         WebkitTextFillColor: 'transparent',
-        //         whiteSpace: 'nowrap'
-        //       }}
-        //     >
-        //       1400+
-        //     </div>
-        //     <div 
-        //       className="text-white text-center"
-        //       style={{
-        //         fontFamily: 'League Spartan, sans-serif',
-        //         fontWeight: 400,
-        //         fontSize: 'clamp(14px, 2.5vw, 20px)',
-        //         lineHeight: '26.53px',
-        //         letterSpacing: '0%'
-        //       }}
-        //     >
-        //       Clients Served
-        //     </div>
-        //   </div>
-          
-        //   {/* Vertical separator */}
-        //   <div className="w-0.5 bg-gray-300 h-16 md:h-20 lg:h-24 self-center relative z-20" style={{ minWidth: '1px' }}></div>
-          
-        //   <div className="flex flex-col items-center">
-        //     <div 
-        //       className="text-transparent bg-clip-text"
-        //       style={{
-        //         fontFamily: 'Sora, sans-serif',
-        //         fontWeight: 700,
-        //         fontSize: 'clamp(32px, 5vw, 60px)',
-        //         lineHeight: '100%',
-        //         letterSpacing: '0%',
-        //         background: 'linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)',
-        //         WebkitBackgroundClip: 'text',
-        //         WebkitTextFillColor: 'transparent',
-        //         whiteSpace: 'nowrap'
-        //       }}
-        //     >
-        //       100M+
-        //     </div>
-        //     <div 
-        //       className="text-white text-center"
-        //       style={{
-        //         fontFamily: 'League Spartan, sans-serif',
-        //         fontWeight: 400,
-        //         fontSize: 'clamp(14px, 2.5vw, 20px)',
-        //         lineHeight: '26.53px',
-        //         letterSpacing: '0%'
-        //       }}
-        //     >
-        //       Revenue Generated
-        //     </div>
-        //   </div>
-          
-        //   {/* Vertical separator */}
-        //   <div className="w-0.5 bg-gray-300 h-16 md:h-20 lg:h-24 self-center relative z-20" style={{ minWidth: '1px' }}></div>
-          
-        //   <div className="flex flex-col items-center">
-        //     <div 
-        //       className="text-transparent bg-clip-text"
-        //       style={{
-        //         fontFamily: 'Sora, sans-serif',
-        //         fontWeight: 700,
-        //         fontSize: 'clamp(32px, 5vw, 60px)',
-        //         lineHeight: '100%',
-        //         letterSpacing: '0%',
-        //         background: 'linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)',
-        //         WebkitBackgroundClip: 'text',
-        //         WebkitTextFillColor: 'transparent',
-        //         whiteSpace: 'nowrap'
-        //       }}
-        //     >
-        //       300+
-        //     </div>
-        //     <div 
-        //       className="text-white text-center"
-        //       style={{
-        //         fontFamily: 'League Spartan, sans-serif',
-        //         fontWeight: 400,
-        //         fontSize: 'clamp(14px, 2.5vw, 20px)',
-        //         lineHeight: '26.53px',
-        //         letterSpacing: '0%'
-        //       }}
-        //     >
-        //       Projects Completed
-        //     </div>
-        //   </div>
-          
-        //   {/* Vertical separator */}
-        //   <div className="w-0.5 bg-gray-300 h-16 md:h-20 lg:h-24 self-center relative z-20" style={{ minWidth: '1px' }}></div>
-          
-        //   <div className="flex flex-col items-center">
-        //     <div 
-        //       className="text-transparent bg-clip-text"
-        //       style={{
-        //         fontFamily: 'Sora, sans-serif',
-        //         fontWeight: 700,
-        //         fontSize: 'clamp(32px, 5vw, 60px)',
-        //         lineHeight: '100%',
-        //         letterSpacing: '0%',
-        //         background: 'linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)',
-        //         WebkitBackgroundClip: 'text',
-        //         WebkitTextFillColor: 'transparent',
-        //         whiteSpace: 'nowrap'
-        //       }}
-        //     >
-        //       150+
-        //     </div>
-        //     <div 
-        //       className="text-white text-center"
-        //       style={{
-        //         fontFamily: 'League Spartan, sans-serif',
-        //         fontWeight: 400,
-        //         fontSize: 'clamp(14px, 2.5vw, 20px)',
-        //         lineHeight: '26.53px',
-        //         letterSpacing: '0%'
-        //       }}
-        //     >
-        //       Industry Awards
-        //     </div>
-        //   </div>
-          
-        //   {/* Vertical separator */}
-        //   <div className="w-0.5 bg-gray-300 h-16 md:h-20 lg:h-24 self-center relative z-20" style={{ minWidth: '1px' }}></div>
-          
-        //   <div className="flex flex-col items-center">
-        //     <div 
-        //       className="text-transparent bg-clip-text"
-        //       style={{
-        //         fontFamily: 'Sora, sans-serif',
-        //         fontWeight: 700,
-        //         fontSize: 'clamp(32px, 5vw, 60px)',
-        //         lineHeight: '100%',
-        //         letterSpacing: '0%',
-        //         background: 'linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)',
-        //         WebkitBackgroundClip: 'text',
-        //         WebkitTextFillColor: 'transparent',
-        //         whiteSpace: 'nowrap'
-        //       }}
-        //     >
-        //       200+
-        //     </div>
-        //     <div 
-        //       className="text-white text-center"
-        //       style={{
-        //         fontFamily: 'League Spartan, sans-serif',
-        //         fontWeight: 400,
-        //         fontSize: 'clamp(14px, 2.5vw, 20px)',
-        //         lineHeight: '26.53px',
-        //         letterSpacing: '0%'
-        //       }}
-        //     >
-        //       Expert Consultants
-        //     </div>
-        //   </div>
-      //   </div>
-      // </div>
-      
-//       {/* Nautilus Method */}
-//       <div className="relative z-10 max-w-6xl mx-auto text-center" style={{ marginTop: "200px" }}>
-//         <h3 
-//           style={{
-//             fontFamily: 'Sora, sans-serif',
-//             fontWeight: 600,
-//             fontSize: '48px',
-//             lineHeight: '100%',
-//             letterSpacing: '0%',
-//             textAlign: 'center',
-//             textTransform: 'capitalize'
-//           }}
-//           className="text-white mb-6"
-//         >
-//           <span>The </span>
-//           <span className="bg-gradient-to-r from-white via-gray-400 to-white bg-clip-text text-transparent">Nautilus Method</span>
-//         </h3>
-//         <div 
-//           style={{
-//             fontFamily: 'League Spartan, sans-serif',
-//             fontWeight: 400,
-//             fontSize: '32px',
-//             lineHeight: '23px',
-//             letterSpacing: '0%',
-//             textAlign: 'center'
-//           }}
-//           className="text-white font-semibold mb-6"
-//         >
-//           Incremental Growth, Infinite Value
-//         </div>
-//         <p 
-//           style={{
-//             fontFamily: 'League Spartan, sans-serif',
-//             fontWeight: 400,
-//             fontSize: '20px',
-//             lineHeight: '23px',
-//             letterSpacing: '0%',
-//             textAlign: 'center'
-//           }}
-//           className="text-gray-300 mb-12 max-w-3xl mx-auto"
-//         >
-//           Inspired by the natural, spiral growth of the nautilus, the Nautilus Method fosters small, low-risk, high-reward changes that drive continuous evolution for both new and established businesses. This iterative cycle of value creation, delivery, and capture reflects a purposeful pursuit of flourishing (Aristotle) and a harmonious alignment with the ecosystem (Spinoza). Through practical application (Bacon) and constant refinement (Popper), it transforms businesses into resilient nodes, adapting to a dynamic world (Kuhn) while upholding a universal duty to benefit all (Kant).
-//         </p>
-//       </div>
-//       {/* Rectangle background above globe */}
-//       <div className="absolute top-15 left-0 w-full h-1/2 z-0 hidden md:block">
-//         <Image
-//           src="/images/Rectangle 3463773.png"
-//           alt="Rectangle background"
-//           width={2000}
-//           height={220}
-//           style={{ marginTop: "280px", width: '180%', marginLeft: '-10%' }}
-//           className="h-auto object-cover"
-//           priority
-//         />
-//       </div>
-
-//       {/* Nautilus Background Image */}
-//       <div 
-//         className="relative z-10 w-full h-screen"
-//         style={{
-//           backgroundImage: 'url(/images/Snail.png)',
-//           backgroundSize: 'cover',
-//           backgroundPosition: 'center bottom',
-//           backgroundRepeat: 'no-repeat',
-//         }}
-//       >
-//       </div>
-//     </section>
-//   );
-// }
-// 
 'use client'
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -617,7 +328,7 @@ export default function OurAchievements() {
             />
 
             {/* Strategic Value - Top Center with Arrow */}
-            <div className="absolute top-22 md:top-30 lg:top-24 2xl:top-25 sm:top-25 left-70 md:left-100 lg:left-170 2xl:left-220 -translate-x-1/2">
+            <div className="absolute top-22 md:top-20 lg:top-24 2xl:top-25 sm:top-25 left-70 md:left-130 lg:left-170 2xl:left-220 -translate-x-1/2">
               <div className="text-left md:max-w-64 max-w-44 ">
                 <h3
                   className="text-sm sm:text-base md:text-lg lg:text-2xl font-semibold mb-2 text-white"
@@ -645,7 +356,7 @@ export default function OurAchievements() {
             </div>
 
             {/* Brand Value - Top Right with Arrow */}
-            <div className="absolute top-70 md:top-55 -right-20  md:-right-5 lg:right-5 2xl:right-110 -translate-x-1/2">
+            <div className="absolute top-70 md:top-55 -right-20  md:-right-25 lg:right-5 2xl:right-110 -translate-x-1/2">
               <div className="text-left md:max-w-56 max-w-40">
                 <h3
                   className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold mb-2 text-white"
@@ -673,7 +384,7 @@ export default function OurAchievements() {
             </div>
 
             {/* Social Value - Bottom Right with Arrow */}
-            <div className="absolute bottom-8 sm:bottom-12 md:bottom-48 lg:bottom-55 2xl:bottom-52 -right-14 sm:right-8 md:right-15 lg:right-29 2xl:right-128">
+            <div className="absolute bottom-8 sm:bottom-12 md:bottom-48 lg:bottom-55 2xl:bottom-52 -right-14 sm:right-8 md:right-5 lg:right-29 2xl:right-128">
               <div className="text-left max-w-56">
                 <h3
                   className="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-2 text-white"
@@ -700,7 +411,7 @@ export default function OurAchievements() {
             </div>
 
             {/* Economic Value - Bottom Left with Arrow */}
-            <div className="absolute bottom-5 sm:bottom-12 md:bottom-35 lg:bottom-45 2xl:bottom-45 left-2 sm:left-8 md:left-2 lg:left-35 2xl:left-90">
+            <div className="absolute bottom-5 sm:bottom-12 md:bottom-35 lg:bottom-45 2xl:bottom-45 left-2 sm:left-8 md:left-15 lg:left-35 2xl:left-90">
               <div className="text-left md:max-w-56 max-w-40">
                 <h3
                   className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold mb-2 text-white"
@@ -727,7 +438,7 @@ export default function OurAchievements() {
             </div>
 
             {/* Emotional Value - Left with Arrow */}
-            <div className="absolute top-35 md:top-80 lg:top-80  2xl:top-85 -translate-y-1/2 left-4 sm:left-8 md:left-4 lg:left-50 2xl:left-100">
+            <div className="absolute top-35 md:top-80 lg:top-80  2xl:top-85 -translate-y-1/2 left-4 sm:left-8 md:left-14 lg:left-50 2xl:left-100">
               <div className="text-left md:max-w-56 max-w-40">
                 <h3
                   className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold mb-2 text-white"
