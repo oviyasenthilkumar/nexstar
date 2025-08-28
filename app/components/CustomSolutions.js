@@ -196,7 +196,7 @@ const CustomSolutions = () => {
             </div>
 
             {/* CTA Button */}
-            <button className="bg-white text-black px-4 sm:px-6 md:px-8 lg:px-10 py-2.5 sm:py-3 md:py-4 lg:py-5 rounded-full font-semibold shadow-xl  transition-transform text-base sm:text-lg md:text-xl leading-tight sm:leading-[20px] tracking-normal text-center w-full sm:w-auto" style={{ fontFamily: 'League Spartan' }}>
+            <button className="bg-white text-black px-4 sm:px-6 md:px-8 lg:px-10 py-2 sm:py-3 md:py-4 lg:py-5 rounded-full font-semibold shadow-xl  transition-transform text-base sm:text-lg md:text-xl leading-tight sm:leading-[20px] tracking-normal text-center w-full sm:w-auto" style={{ fontFamily: 'League Spartan' }}>
               Schedule Your Discovery Call
             </button>
           </div>
