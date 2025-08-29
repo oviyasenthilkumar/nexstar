@@ -63,6 +63,60 @@ body {
   }
 }
 
+/* Snail Image Responsive Positioning for OurAchievements Component */
+/* .snail-bg-mobile {
+  background-position: 20% center !important;
+}
+
+.snail-bg-tablet {
+  background-position: 30% center !important;
+}
+
+.snail-bg-desktop {
+  background-position: 35% center !important;
+}
+
+.snail-bg-large {
+  background-position: 40% center !important;
+} */
+
+@media (max-width: 639px) { /* Mobile: <640px */
+  .snail-bg-mobile {
+    background-position: 49% center !important;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) { /* Small Tablet: 640px–767px */
+  .snail-bg-tablet {
+    background-position: 25% center !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) { /* Tablet: 768px–1023px */
+  .snail-bg-tablet {
+    background-position: 38% center !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) { /* Desktop: 1024px–1279px */
+  .snail-bg-desktop {
+    background-position: 35% center !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) { /* MacBook and similar: 1280px–1440px */
+  .snail-bg-large {
+    background-position: 36% center !important;
+  }
+}
+
+@media (min-width: 1441px) { /* Large Desktop: 1441px+ */
+  .snail-bg-large {
+    background-position: 40% center !important;
+  }
+}
+
+
 @keyframes slow-anticlockwise {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(-360deg); }
