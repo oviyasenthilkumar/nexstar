@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -36,7 +35,7 @@ export default function Home() {
         <div className="relative z-15 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <Image
             src="/images/play-button.png"
-            alt="Play Video"
+            alt=""
             width={80}
             height={80}
             className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 opacity-80 hover:opacity-100 transition-opacity duration-300 cursor-pointer"
