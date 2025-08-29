@@ -318,7 +318,7 @@ export default function OurAchievements() {
             <div
               className="absolute inset-0 w-full h-full lg:translate-x- snail-bg-mobile snail-bg-tablet snail-bg-desktop snail-bg-large"
               style={{
-                backgroundImage: "url(/Snail-img.png)",
+                backgroundImage: "url(/snail-img.png)",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
               }}
