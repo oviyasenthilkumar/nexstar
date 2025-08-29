@@ -1,6 +1,3 @@
-
-
-
 'use client'
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -26,8 +23,11 @@ export default function OurAchievements() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          background:
-            "radial-gradient(circle at center, rgba(79, 70, 229, 0.3) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1) 100%)",
+          backgroundImage: 'url(/images/blackbg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          minHeight: '100vh',
         }}
       />
 
@@ -94,7 +94,7 @@ export default function OurAchievements() {
                   style={{
                     fontFamily: "Sora, sans-serif",
                     fontWeight: 700,
-                    fontSize: "clamp(32px, 5vw, 60px)",
+                    fontSize: "clamp(24px, 4vw, 60px)", // Reduced from 32px to 24px for mobile
                     lineHeight: "100%",
                     letterSpacing: "0%",
                     background:
@@ -112,7 +112,7 @@ export default function OurAchievements() {
                   style={{
                     fontFamily: "League Spartan, sans-serif",
                     fontWeight: 400,
-                    fontSize: "20px",
+                    fontSize: "clamp(16px, 3.5vw, 20px)", // Reduced from 20px to 16px for mobile
                     lineHeight: "26.53px",
                     letterSpacing: "0%",
                   }}
@@ -133,7 +133,7 @@ export default function OurAchievements() {
                   style={{
                     fontFamily: "Sora, sans-serif",
                     fontWeight: 700,
-                    fontSize: "clamp(32px, 5vw, 60px)",
+                    fontSize: "clamp(24px, 4vw, 60px)", // Reduced from 32px to 24px for mobile
                     lineHeight: "100%",
                     letterSpacing: "0%",
                     background:
@@ -151,8 +151,7 @@ export default function OurAchievements() {
                   style={{
                     fontFamily: "League Spartan, sans-serif",
                     fontWeight: 400,
-                    fontSize: "20px",
-                    
+                    fontSize: "clamp(16px, 3.5vw, 20px)", // Reduced from 20px to 16px for mobile
                     lineHeight: "26.53px",
                     letterSpacing: "0%",
                   }}
@@ -173,7 +172,7 @@ export default function OurAchievements() {
                   style={{
                     fontFamily: "Sora, sans-serif",
                     fontWeight: 700,
-                    fontSize: "clamp(32px, 5vw, 60px)",
+                    fontSize: "clamp(24px, 4vw, 60px)", // Reduced from 32px to 24px for mobile
                     lineHeight: "100%",
                     letterSpacing: "0%",
                     background:
@@ -191,8 +190,7 @@ export default function OurAchievements() {
                   style={{
                     fontFamily: "League Spartan, sans-serif",
                     fontWeight: 400,
-                    fontSize: "20px",
-                    
+                    fontSize: "clamp(16px, 3.5vw, 20px)", // Reduced from 20px to 16px for mobile
                     lineHeight: "26.53px",
                     letterSpacing: "0%",
                   }}
@@ -213,7 +211,7 @@ export default function OurAchievements() {
                   style={{
                     fontFamily: "Sora, sans-serif",
                     fontWeight: 700,
-                    fontSize: "clamp(32px, 5vw, 60px)",
+                    fontSize: "clamp(24px, 4vw, 60px)", // Reduced from 32px to 24px for mobile
                     lineHeight: "100%",
                     letterSpacing: "0%",
                     background:
@@ -231,7 +229,7 @@ export default function OurAchievements() {
                   style={{
                     fontFamily: "League Spartan, sans-serif",
                     fontWeight: 400,
-                    fontSize: "20px",
+                    fontSize: "clamp(16px, 3.5vw, 20px)", // Reduced from 20px to 16px for mobile
                     lineHeight: "26.53px",
                     letterSpacing: "0%",
                   }}
@@ -252,7 +250,7 @@ export default function OurAchievements() {
                   style={{
                     fontFamily: "Sora, sans-serif",
                     fontWeight: 700,
-                    fontSize: "clamp(32px, 5vw, 60px)",
+                    fontSize: "clamp(24px, 4vw, 60px)", // Reduced from 32px to 24px for mobile
                     lineHeight: "100%",
                     letterSpacing: "0%",
                     background:
@@ -318,11 +316,10 @@ export default function OurAchievements() {
           <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
             {/* Full-width Nautilus Shell Background */}
             <div
-              className="absolute inset-0 w-full h-full lg:translate-x-"
+              className="absolute inset-0 w-full h-full lg:translate-x- snail-bg-mobile snail-bg-tablet snail-bg-desktop snail-bg-large"
               style={{
-                backgroundImage: "url(/snail-img.png)",
+                backgroundImage: "url(/Snail-img.png)",
                 backgroundSize: "cover",
-                backgroundPosition: "35% center",
                 backgroundRepeat: "no-repeat",
               }}
             />
