@@ -85,199 +85,274 @@ export default function OurAchievements() {
                 style={{ animationDuration: "50s" }}
               />{" "}
             </div>{" "}
-            <div className="flex flex-row flex-wrap md:flex-nowrap justify-center gap-4 md:gap-8 lg:gap-12 absolute top-30 md:top-40 lg:top-60 2xl:top-55 left-0 right-0 w-full bg-[url('/images/black-bg.png')] bg-no-repeat bg-cover bg-center md:py-10 lg:py-30 md:pb-[30rem] lg:pb-[43rem]">
-              {" "}
-              <div className="flex flex-col items-center">
-                {" "}
+            <div className="flex flex-col flex-wrap md:flex-nowrap justify-center gap-4 md:gap-8 lg:gap-12 absolute top-30 md:top-40 lg:top-60 2xl:top-55 left-0 right-0 w-full bg-[url('/images/black-bg.png')] bg-no-repeat bg-cover bg-center md:py-10 lg:py-30 md:pb-[30rem] lg:pb-[43rem]">
+              {/* First Row - 3 statistics for mobile, all 5 for larger screens */}
+              <div className="flex flex-row flex-wrap md:flex-nowrap justify-center gap-4 md:gap-8 lg:gap-12 w-full">
+                {/* Clients Served */}
+                <div className="flex flex-col items-center">
+                  <div
+                    className="text-transparent bg-clip-text"
+                    style={{
+                      fontFamily: "Sora, sans-serif",
+                      fontWeight: 700,
+                      fontSize: "clamp(18px, 3.5vw, 60px)", // Reduced from 24px to 18px for mobile
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      background:
+                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    1400+
+                  </div>
+                  <div
+                    className="text-white text-center"
+                    style={{
+                      fontFamily: "League Spartan, sans-serif",
+                      fontWeight: 400,
+                      fontSize: "clamp(12px, 2.5vw, 20px)", // Reduced from 16px to 12px for mobile
+                      lineHeight: "26.53px",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    Clients Served
+                  </div>
+                </div>
+
+                {/* Vertical separator */}
                 <div
-                  className="text-transparent bg-clip-text"
-                  style={{
-                    fontFamily: "Sora, sans-serif",
-                    fontWeight: 700,
-                    fontSize: "clamp(24px, 4vw, 60px)", // Reduced from 32px to 24px for mobile
-                    lineHeight: "100%",
-                    letterSpacing: "0%",
-                    background:
-                      "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {" "}
-                  1400+{" "}
-                </div>{" "}
+                  className="w-0.5 top-[-10] bg-gray-300 h-14 md:h-20 lg:h-24 self-center relative z-20"
+                  style={{ minWidth: "1px" }}
+                ></div>
+
+                {/* Revenue Generated */}
+                <div className="flex flex-col items-center">
+                  <div
+                    className="text-transparent bg-clip-text"
+                    style={{
+                      fontFamily: "Sora, sans-serif",
+                      fontWeight: 700,
+                      fontSize: "clamp(18px, 3.5vw, 60px)", // Reduced from 24px to 18px for mobile
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      background:
+                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    100M+
+                  </div>
+                  <div
+                    className="text-white text-center"
+                    style={{
+                      fontFamily: "League Spartan, sans-serif",
+                      fontWeight: 400,
+                      fontSize: "clamp(12px, 2.5vw, 20px)", // Reduced from 16px to 12px for mobile
+                      lineHeight: "26.53px",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    Revenue Generated
+                  </div>
+                </div>
+
+                {/* Vertical separator */}
                 <div
-                  className="text-white text-center"
-                  style={{
-                    fontFamily: "League Spartan, sans-serif",
-                    fontWeight: 400,
-                    fontSize: "clamp(16px, 3.5vw, 20px)", // Reduced from 20px to 16px for mobile
-                    lineHeight: "26.53px",
-                    letterSpacing: "0%",
-                  }}
-                >
-                  {" "}
-                  Clients Served{" "}
-                </div>{" "}
-              </div>{" "}
-              {/* Vertical separator */}{" "}
-              <div
-                className="w-0.5 bg-gray-300 h-16 md:h-20 lg:h-24 self-center relative z-20"
-                style={{ minWidth: "1px" }}
-              ></div>{" "}
-              <div className="flex flex-col items-center">
-                {" "}
+                  className="w-0.5 top-[-10] bg-gray-300 h-14 md:h-20 lg:h-24 self-center relative z-20"
+                  style={{ minWidth: "1px" }}
+                ></div>
+
+                {/* Projects Completed */}
+                <div className="flex flex-col items-center">
+                  <div
+                    className="text-transparent bg-clip-text"
+                    style={{
+                      fontFamily: "Sora, sans-serif",
+                      fontWeight: 700,
+                      fontSize: "clamp(18px, 3.5vw, 60px)", // Reduced from 24px to 18px for mobile
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      background:
+                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    300+
+                  </div>
+                  <div
+                    className="text-white text-center"
+                    style={{
+                      fontFamily: "League Spartan, sans-serif",
+                      fontWeight: 400,
+                      fontSize: "clamp(12px, 2.5vw, 20px)", // Reduced from 16px to 12px for mobile
+                      lineHeight: "26.53px",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    Projects Completed
+                  </div>
+                </div>
+
+                {/* Vertical separator - hidden on mobile, visible on larger screens */}
                 <div
-                  className="text-transparent bg-clip-text"
-                  style={{
-                    fontFamily: "Sora, sans-serif",
-                    fontWeight: 700,
-                    fontSize: "clamp(24px, 4vw, 60px)", // Reduced from 32px to 24px for mobile
-                    lineHeight: "100%",
-                    letterSpacing: "0%",
-                    background:
-                      "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {" "}
-                  100M+{" "}
-                </div>{" "}
+                  className="hidden md:block w-0.5 bg-gray-300 h-16 md:h-20 lg:h-24 self-center relative z-20"
+                  style={{ minWidth: "1px" }}
+                ></div>
+
+                {/* Industry Awards - hidden on mobile, visible on larger screens */}
+                <div className="hidden md:flex flex-col items-center">
+                  <div
+                    className="text-transparent bg-clip-text"
+                    style={{
+                      fontFamily: "Sora, sans-serif",
+                      fontWeight: 700,
+                      fontSize: "clamp(24px, 4vw, 60px)",
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      background:
+                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    150+
+                  </div>
+                  <div
+                    className="text-white text-center"
+                    style={{
+                      fontFamily: "League Spartan, sans-serif",
+                      fontWeight: 400,
+                      fontSize: "clamp(16px, 3.5vw, 20px)",
+                      lineHeight: "26.53px",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    Industry Awards
+                  </div>
+                </div>
+
+                {/* Vertical separator - hidden on mobile, visible on larger screens */}
                 <div
-                  className="text-white text-center"
-                  style={{
-                    fontFamily: "League Spartan, sans-serif",
-                    fontWeight: 400,
-                    fontSize: "clamp(16px, 3.5vw, 20px)", // Reduced from 20px to 16px for mobile
-                    lineHeight: "26.53px",
-                    letterSpacing: "0%",
-                  }}
-                >
-                  {" "}
-                  Revenue Generated{" "}
-                </div>{" "}
-              </div>{" "}
-              {/* Vertical separator */}{" "}
-              <div
-                className="w-0.5 bg-gray-300 h-16 md:h-20 lg:h-24 self-center relative z-20"
-                style={{ minWidth: "1px" }}
-              ></div>{" "}
-              <div className="flex flex-col items-center">
-                {" "}
+                  className="hidden md:block w-0.5 bg-gray-300 h-16 md:h-20 lg:h-24 self-center relative z-20"
+                  style={{ minWidth: "1px" }}
+                ></div>
+
+                {/* Expert Consultants - hidden on mobile, visible on larger screens */}
+                <div className="hidden md:flex flex-col items-center">
+                  <div
+                    className="text-transparent bg-clip-text"
+                    style={{
+                      fontFamily: "Sora, sans-serif",
+                      fontWeight: 700,
+                      fontSize: "clamp(24px, 4vw, 60px)",
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      background:
+                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    200+
+                  </div>
+                  <div
+                    className="text-white text-center"
+                    style={{
+                      fontFamily: "League Spartan, sans-serif",
+                      fontWeight: 400,
+                      fontSize: "20px",
+                      lineHeight: "26.53px",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    Expert Consultants
+                  </div>
+                </div>
+              </div>
+
+              {/* Second Row - 2 statistics for mobile only */}
+              <div className="flex md:hidden flex-row justify-center gap-4 mt-6">
+                {/* Industry Awards - mobile only */}
+                <div className="flex flex-col items-center">
+                  <div
+                    className="text-transparent bg-clip-text"
+                    style={{
+                      fontFamily: "Sora, sans-serif",
+                      fontWeight: 700,
+                      fontSize: "clamp(18px, 3.5vw, 60px)", // Reduced from 24px to 18px for mobile
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      background:
+                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    150+
+                  </div>
+                  <div
+                    className="text-white text-center"
+                    style={{
+                      fontFamily: "League Spartan, sans-serif",
+                      fontWeight: 400,
+                      fontSize: "clamp(12px, 2.5vw, 20px)", // Reduced from 16px to 12px for mobile
+                      lineHeight: "26.53px",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    Industry Awards
+                  </div>
+                </div>
+
+                {/* Vertical separator */}
                 <div
-                  className="text-transparent bg-clip-text"
-                  style={{
-                    fontFamily: "Sora, sans-serif",
-                    fontWeight: 700,
-                    fontSize: "clamp(24px, 4vw, 60px)", // Reduced from 32px to 24px for mobile
-                    lineHeight: "100%",
-                    letterSpacing: "0%",
-                    background:
-                      "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {" "}
-                  300+{" "}
-                </div>{" "}
-                <div
-                  className="text-white text-center"
-                  style={{
-                    fontFamily: "League Spartan, sans-serif",
-                    fontWeight: 400,
-                    fontSize: "clamp(16px, 3.5vw, 20px)", // Reduced from 20px to 16px for mobile
-                    lineHeight: "26.53px",
-                    letterSpacing: "0%",
-                  }}
-                >
-                  {" "}
-                  Projects Completed{" "}
-                </div>{" "}
-              </div>{" "}
-              {/* Vertical separator */}{" "}
-              <div
-                className="w-0.5 bg-gray-300 h-16 md:h-20 lg:h-24 self-center relative z-20"
-                style={{ minWidth: "1px" }}
-              ></div>{" "}
-              <div className="flex flex-col items-center">
-                {" "}
-                <div
-                  className="text-transparent bg-clip-text"
-                  style={{
-                    fontFamily: "Sora, sans-serif",
-                    fontWeight: 700,
-                    fontSize: "clamp(24px, 4vw, 60px)", // Reduced from 32px to 24px for mobile
-                    lineHeight: "100%",
-                    letterSpacing: "0%",
-                    background:
-                      "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {" "}
-                  150+{" "}
-                </div>{" "}
-                <div
-                  className="text-white text-center"
-                  style={{
-                    fontFamily: "League Spartan, sans-serif",
-                    fontWeight: 400,
-                    fontSize: "clamp(16px, 3.5vw, 20px)", // Reduced from 20px to 16px for mobile
-                    lineHeight: "26.53px",
-                    letterSpacing: "0%",
-                  }}
-                >
-                  {" "}
-                  Industry Awards{" "}
-                </div>{" "}
-              </div>{" "}
-              {/* Vertical separator */}{" "}
-              <div
-                className="w-0.5 bg-gray-300 h-16 md:h-20 lg:h-24 self-center relative z-20"
-                style={{ minWidth: "1px" }}
-              ></div>{" "}
-              <div className="flex flex-col items-center">
-                {" "}
-                <div
-                  className="text-transparent bg-clip-text"
-                  style={{
-                    fontFamily: "Sora, sans-serif",
-                    fontWeight: 700,
-                    fontSize: "clamp(24px, 4vw, 60px)", // Reduced from 32px to 24px for mobile
-                    lineHeight: "100%",
-                    letterSpacing: "0%",
-                    background:
-                      "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {" "}
-                  200+{" "}
-                </div>{" "}
-                <div
-                  className="text-white text-center"
-                  style={{
-                    fontFamily: "League Spartan, sans-serif",
-                    fontWeight: 400,
-                    fontSize: "20px",
-                    lineHeight: "26.53px",
-                    letterSpacing: "0%",
-                  }}
-                >
-                  {" "}
-                  Expert Consultants{" "}
-                </div>{" "}
-              </div>{" "}
-            </div>{" "}
+                  className="w-0.5 bg-gray-300 h-14 top-[-10] md:h-20 lg:h-24 self-center relative z-20"
+                  style={{ minWidth: "1px" }}
+                ></div>
+
+                {/* Expert Consultants - mobile only */}
+                <div className="flex flex-col items-center">
+                  <div
+                    className="text-transparent bg-clip-text"
+                    style={{
+                      fontFamily: "Sora, sans-serif",
+                      fontWeight: 700,
+                      fontSize: "clamp(18px, 3.5vw, 60px)", // Reduced from 24px to 18px for mobile
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      background:
+                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    200+
+                  </div>
+                  <div
+                    className="text-white text-center"
+                    style={{
+                      fontFamily: "League Spartan, sans-serif",
+                      fontWeight: 400,
+                      fontSize: "clamp(12px, 2.5vw, 20px)", // Reduced from 16px to 12px for mobile
+                      lineHeight: "26.53px",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    Expert Consultants
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>{" "}
         </div>
         {/* Nautilus Method Section */}
@@ -296,7 +371,7 @@ export default function OurAchievements() {
               Incremental Growth, Infinite Value
             </p>
             <p
-              className="font-normal text-sm sm:text-base md:text-xl text-gray-400 md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed"
+              className="font-normal px-5 md:px-0 text-sm sm:text-base md:text-xl text-gray-400 md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed"
               style={{ fontFamily: "League Spartan, sans-serif" }}
             >
               Inspired by the natural, spiral growth of the nautilus, the
@@ -325,8 +400,8 @@ export default function OurAchievements() {
             />
 
             {/* Strategic Value - Top Center with Arrow */}
-            <div className="absolute top-22 md:top-20 lg:top-24 2xl:top-25 sm:top-25 left-70 md:left-130 lg:left-170 2xl:left-220 -translate-x-1/2">
-              <div className="text-left md:max-w-64 max-w-44 ">
+            <div className="absolute px-2 md:px-0 top-22 md:top-20 lg:top-24 2xl:top-25 sm:top-25 left-70 md:left-130 lg:left-170 2xl:left-220 -translate-x-1/2">
+              <div className="text-left md:max-w-64 max-w-40 -mr-18 md:mr-0 -ml-10 md:ml-0">
                 <h3
                   className="text-sm sm:text-base md:text-lg lg:text-2xl font-semibold mb-2 text-white"
                   style={{ fontFamily: "Sora, sans-serif" }}
@@ -353,7 +428,7 @@ export default function OurAchievements() {
             </div>
 
             {/* Brand Value - Top Right with Arrow */}
-            <div className="absolute top-70 md:top-55 -right-20  md:-right-25 lg:right-5 2xl:right-110 -translate-x-1/2">
+            <div className="absolute px-2 md:px-0 top-65 md:top-55 -right-20  md:-right-25 lg:right-5 2xl:right-110 -translate-x-1/2">
               <div className="text-left md:max-w-56 max-w-40">
                 <h3
                   className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold mb-2 text-white"
@@ -381,7 +456,7 @@ export default function OurAchievements() {
             </div>
 
             {/* Social Value - Bottom Right with Arrow */}
-            <div className="absolute bottom-8 sm:bottom-12 md:bottom-48 lg:bottom-55 2xl:bottom-52 -right-14 sm:right-8 md:right-5 lg:right-29 2xl:right-128">
+            <div className="absolute px-2 md:px-0 bottom-8 sm:bottom-12 md:bottom-48 lg:bottom-55 2xl:bottom-52 -right-14 sm:right-8 md:right-5 lg:right-29 2xl:right-128">
               <div className="text-left max-w-56">
                 <h3
                   className="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-2 text-white"
@@ -408,7 +483,7 @@ export default function OurAchievements() {
             </div>
 
             {/* Economic Value - Bottom Left with Arrow */}
-            <div className="absolute bottom-5 sm:bottom-12 md:bottom-35 lg:bottom-45 2xl:bottom-45 left-2 sm:left-8 md:left-15 lg:left-35 2xl:left-90">
+            <div className="absolute px-2 md:px-0 bottom-5 sm:bottom-12 md:bottom-35 lg:bottom-45 2xl:bottom-45 left-2 sm:left-8 md:left-15 lg:left-35 2xl:left-90">
               <div className="text-left md:max-w-56 max-w-40">
                 <h3
                   className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold mb-2 text-white"
@@ -435,7 +510,7 @@ export default function OurAchievements() {
             </div>
 
             {/* Emotional Value - Left with Arrow */}
-            <div className="absolute top-35 md:top-80 lg:top-80  2xl:top-85 -translate-y-1/2 left-4 sm:left-8 md:left-14 lg:left-50 2xl:left-100">
+            <div className="absolute px-2 md:px-0 top-35 md:top-80 lg:top-80  2xl:top-85 -translate-y-1/2 left-4 sm:left-8 md:left-14 lg:left-50 2xl:left-100">
               <div className="text-left md:max-w-56 max-w-40">
                 <h3
                   className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold mb-2 text-white"
