@@ -1,6 +1,3 @@
-
-
-
 "use client";
 
 import Image from "next/image";
@@ -114,7 +111,7 @@ export default function Home() {
               translate-y-12 sm:translate-y-4 md:translate-y-0
             "
           >
-            <p className="font-normal text-white/80 text-[10px] sm:text-sm md:text-xl lg:text-lg leading-relaxed font-league-spartan mb-4 sm:mb-6 md:mb-8 max-w-[95vw] ">
+            <p className="font-normal text-white/80 text-[11px] sm:text-sm md:text-xl lg:text-lg leading-relaxed font-league-spartan mb-4 sm:mb-6 md:mb-8 max-w-[95vw] ">
               In a world where interconnectedness redefines success, NexStar
               Consulting invites you to lead your company's evolution. Inspired
               by the natural harmony of ecosystems and humanity's continuous
