@@ -447,7 +447,7 @@ export default function OurAchievements() {
               {/* Arrow pointing to shell */}
 
               <Image
-                className="absolute top-12 -left-8 md:-left-35 lg:-left-55 lg:top-[65] 2xl:left-[-200] 2xl:top-18 hidden md:block"
+                className="absolute top-12 -left-8 md:-left-35 lg:-left-40 lg:top-[80] 2xl:left-[-150] 2xl:top-18 hidden md:block"
                 src="/images/top-right-arrow.png"
                 alt="top right Arrow"
                 width={120}
