@@ -401,7 +401,7 @@ export default function OurAchievements() {
 
             {/* Strategic Value - Top Center with Arrow */}
             <div className="absolute px-2 md:px-0 top-22 md:top-20 lg:top-24 2xl:top-25 sm:top-25 left-70 md:left-130 lg:left-170 2xl:left-220 -translate-x-1/2">
-              <div className="text-left md:max-w-64 max-w-40 -mr-18 md:mr-0 -ml-10 md:ml-0">
+              <div className="text-left md:max-w-64 max-w-40 -mr-9 md:mr-0 -ml-15 md:ml-0">
                 <h3
                   className="text-sm sm:text-base md:text-lg lg:text-2xl font-semibold mb-2 text-white"
                   style={{ fontFamily: "Sora, sans-serif" }}
@@ -429,7 +429,7 @@ export default function OurAchievements() {
 
             {/* Brand Value - Top Right with Arrow */}
             <div className="absolute px-2 md:px-0 top-65 md:top-55 -right-20  md:-right-25 lg:right-5 2xl:right-110 -translate-x-1/2">
-              <div className="text-left md:max-w-56 max-w-40">
+              <div className="text-left md:max-w-56 max-w-35 md:mr-0 -ml-1 md:ml-0">
                 <h3
                   className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold mb-2 text-white"
                   style={{ fontFamily: "Sora, sans-serif" }}
