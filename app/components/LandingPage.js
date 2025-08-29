@@ -31,26 +31,7 @@ export default function Home() {
           ></div>
         </div>
 
-        {/* Play Button Image - Above curve SVG */}
-        // <div className="relative z-15 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        //   <Image
-        //     src="/images/play-button.png"
-        //     alt="Play Video"
-        //     width={80}
-        //     height={80}
-        //     className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 opacity-80 hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-        //   />
-        // </div>
-
-        {/* Gradient Ellipse behind logo - top left */}
-        {/* <div className="fixed top-0 left-0 z-0 pointer-events-none">
-          <div 
-            className="absolute w-[200px] h-[800px] -top-[400px] -left-[216.18px] -rotate-[70deg] bg-gradient-radial from-[#655BC7] via-[#655BC7]/60 to-transparent opacity-70 blur-2xl"
-            style={{ backdropFilter: 'blur(188px)' }}
-          ></div>
-        </div> */}
-
-        {/* Header - Removed top gap */}
+       {/* Header - Removed top gap */}
         <div className="relative z-50 -mt-8 lg:-mt-20">
           <Header />
         </div>
