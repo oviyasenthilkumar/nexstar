@@ -45,7 +45,7 @@ export default function AboutUs() {
             </span>
           </h1>
 
-          <div className="text-[#6C6C6C] font-normal text-xs sm:text-sm md:text-base lg:text-xl lg:max-w-2xl space-y-4">
+          <div className="text-[#6C6C6C] font-normal text-sm sm:text-sm md:text-base lg:text-xl lg:max-w-2xl space-y-4">
             <p>
               With three decades as an entrepreneur, I've walked a path of trial
               and learning. Over 10 failures are not defeats but refuted
