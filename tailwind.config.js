@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx,html}'], // adjust based on your structure
+  content: [
+    './app/**/*.{js,ts,jsx,tsx,html}',
+    './components/**/*.{js,ts,jsx,tsx,html}',
+    './pages/**/*.{js,ts,jsx,tsx,html}',
+    './src/**/*.{js,ts,jsx,tsx,html}'
+  ],
   theme: {
     extend: {
       colors: {
@@ -8,7 +14,7 @@ module.exports = {
         foreground: 'var(--foreground)',
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'sans-serif'],
+        sans: ['var(--font-league-spartan)', 'sans-serif' ] ,
         mono: ['var(--font-geist-mono)', 'monospace'],
         sora: ['var(--font-sora)', 'sans-serif'],
         spartan: ['var(--font-league-spartan)', 'sans-serif'],

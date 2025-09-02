@@ -34,7 +34,7 @@ const Solution = () => {
       {/* Main content */}
       <div className="relative z-10 text-center px-8 max-w-5xl mx-auto">
         {/* Subtitle */}
-        <p 
+        {/* <p 
           className="text-[#F0F0F0] mb-4 uppercase text-center -mt-18 sm:-mt-8 md:-mt-10 lg:-mt-12 xl:-mt-8 2xl:-mt-4"
           style={{
             fontFamily: 'League Spartan',
@@ -47,16 +47,15 @@ const Solution = () => {
           }}
         >
           WELCOME TO THE ERA OF ECOSYSTEMS
-        </p>
+        </p> */}
         
         {/* Main heading */}
         <h1 
   className="mb-4 max-w-3xl md:max-w-2xl lg:max-w-xl mx-auto text-center capitalize 
              bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent
-             text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-4xl 2xl:text-5xl font-semibold font-sora"
+             text-3xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-4xl 2xl:text-5xl font-semibold font-sora"
 >
-  Grow Your Value With <br />
-  Conscious Solutions
+Conscious solutions. Measurable value.
 </h1>
 
         
@@ -73,10 +72,7 @@ const Solution = () => {
             textAlign: 'center'
           }}
         >
-          At NexStar Consulting, we offer tailored consulting to align your business with the
-          Nautilus Method, a framework that transforms resources into measurable, sustainable
-          value. Our services are empirical tools that reduce risks and maximize opportunities,
-          connecting your company to a broader ecosystem with precision and purpose.
+         Nautilus Method — <b>Diagnose</b> → <b>Pilot</b> → <b>Scale</b> → <b>Operate</b>. We align purpose, build replicable systems, digitize with <b>Zoho</b>, automate with <b>RPA</b>, and apply <b>AI</b> only where it lifts KPIs—so value grows predictably.
         </p>
       </div>
     </div>

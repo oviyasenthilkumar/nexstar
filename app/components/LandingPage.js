@@ -5,147 +5,199 @@ import Header from "./Header";
 
 export default function Home() {
   return (
-    <div
-      className="relative text-white bg-cover bg-center h-[110vh] md:h-[106vh] lg:h-[130vh] xl:h-[150vh] 2xl:h-[140vh]"
-      style={{ backgroundImage: "url('/images/Solution.png')" }}
+    <main
+      className="relative text-white bg-cover bg-center h-[117vh] md:h-[100vh] lg:h-[130vh] xl:h-[155vh] 2xl:h-[145vh]"
+      style={{
+        backgroundImage: "url('/images/Solution.webp')",
+      }}
+      role="main"
+      aria-label="NexStar landing page - Build a business that runs without you"
     >
       {/* Layered Curve Background */}
       <div
         className="relative z-10 w-full min-h-screen bg-no-repeat bg-contain custom-curve-bg"
         style={{ backgroundImage: "url('/curve.svg')" }}
+        aria-hidden="true"
       >
-        {/* White Grid Lines - Only for top 70% and bigger */}
+        {/* White Grid Lines - Unchanged */}
         <div
-          className="absolute inset-0 z-12 pointer-events-none"
-          style={{ height: "70%" }}
+          className="absolute inset-0 z-12 pointer-events-none h-[60%] sm:h-[65%] md:h-[62%] lg:h-[75%] xl:h-[60%] 2xl:h-[67%]"
+          aria-hidden="true"
         >
           <div
             className="w-full h-full"
             style={{
               backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)
-            `,
+                linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)
+              `,
               backgroundSize: "80px 80px",
             }}
           ></div>
         </div>
 
-        {/* Play Button Image - Above curve SVG */}
+        {/* Play Button Image - Unchanged */}
         <div className="relative z-15 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <Image
-            src="/images/play-button.png"
-            alt="v"
-            width={80}
-            height={80}
-            className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 opacity-80 hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-          />
+          <button
+            className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 opacity-80 hover:opacity-100 transition-opacity duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#5B6FFF] focus:ring-offset-2 focus:ring-offset-transparent rounded-full"
+            aria-label="Play video or presentation"
+            onClick={() => {/* Add your play functionality here */}}
+          >
+            <picture>
+              <source srcSet="/images/play-button.avif" type="image/avif" />
+              <source srcSet="/images/play-button.webp" type="image/webp" />
+              <Image
+                src="/images/play-button.png"
+                alt="p"
+                width={80}
+                height={80}
+                className="w-full h-full"
+                loading="lazy"
+                sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, (max-width: 1024px) 96px, 112px"
+              />
+            </picture>
+          </button>
         </div>
 
-        {/* Gradient Ellipse behind logo - top left */}
-        {/* <div className="fixed top-0 left-0 z-0 pointer-events-none">
-          <div 
-            className="absolute w-[200px] h-[800px] -top-[400px] -left-[216.18px] -rotate-[70deg] bg-gradient-radial from-[#655BC7] via-[#655BC7]/60 to-transparent opacity-70 blur-2xl"
-            style={{ backdropFilter: 'blur(188px)' }}
-          ></div>
-        </div> */}
-
-        {/* Header - Removed top gap */}
+        {/* Header - Unchanged */}
         <div className="relative z-50 -mt-8 lg:-mt-20">
           <Header />
         </div>
 
-        {/* Hero Section */}
-        <section className="relative z-25 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 pt-2 sm:pt-6 md:pt-8 lg:pt-10 text-center">
-          <p className="text-sm sm:text-xs md:text-xl uppercase tracking-wider font-league-spartan text-white/80 mb-2 sm:mb-3 md:mb-4">
-            Welcome to the era of ecosystems
-          </p>
-          <h1 
-              className="text-3xl sm:text-5xl md:text-7xl lg:text-7xl font-bold leading-tight font-sora 
-                        bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent
-                        mb-3 sm:mb-4 md:mb-6 text-center"
-            >
-              Unlock Growth with <br />
-              <span className="bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent">
-                Digital Ecosystems
-              </span>
-            </h1>
+        {/* GRID CONTAINER: This is the main 12-column grid wrapper */}
+        <div className="relative z-25 grid grid-cols-12 gap-x-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
 
-          <p className="text-[#F0F0F0] font-normal text-sm sm:text-base md:text-2xl lg:text-2xl font-league-spartan mb-6 sm:mb-8 md:mb-10  mx-auto px-2">
-            NexStar Consulting leverages AI, blockchain, and strategic
-            partnerships
-            <br className="hidden md:inline" />
-            to streamline operations and boost ROI in a connected world.
-          </p>
-          <a
-            href="#consultation"
-            role="button"
-            aria-label="Schedule your consultation"
-            className="inline-block bg-[#545CF6] hover:bg-[#4F46E5] px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 text-white font-semibold text-sm sm:text-base md:text-xl font-league-spartan rounded-full transition duration-200 shadow-lg shadow-[#5B6FFF]/20 hover:shadow-xl hover:shadow-[#5B6FFF]/30 relative"
-          >
-            Schedule Your Consultation
-            {/* Bright white light effect at bottom edge - intense center, gradient blur to corners */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[377px] h-1.5 sm:h-2 md:h-2.5 bg-gradient-to-r from-transparent via-white  to-transparent opacity-100 blur-md shadow-[0_0_12px_rgba(255,255,255,0.8)]"></div>
-          </a>
-        </section>
-
-        {/* Team Image - Made Responsive */}
-        <div className="relative z-20 flex justify-center mt-2 sm:mt-12 md:mt-0 lg:-mt-15 2xl:mt-0 px-4 sm:px-6 lg:px-8 min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] -translate-y-8 sm:-translate-y-2 md:translate-y-0 sm:pb-8 md:pb-12 lg:pb-16">
-          <Image
-            src="/images/groupimage.png"
-            alt="NexStar Team"
-            width={1200}
-            height={400}
-            priority
-            className="w-full max-w-[110vw] sm:max-w-[95vw] md:max-w-[70vw] lg:max-w-[60vw] xl:max-w-[50vw] object-contain"
-          />
-          {/* Mission Section Overlapping Bottom 50% */}
+          {/* Hero Section: Now occupies the full 12 columns of our grid. */}
           <section
-            className="
-              absolute left-1/2 -bottom-30 sm:bottom-8 md:-bottom-14 lg:-bottom-11 z-30
-              w-full max-w-[95vw] sm:max-w-5xl lg:max-w-6xl
-              -translate-x-1/2
-              px-4 sm:px-6 lg:px-8
-              flex flex-col items-center justify-center
-              text-center
-              translate-y-12 sm:translate-y-4 md:translate-y-0
-            "
+            className="col-span-12 pt-2 sm:pt-6 md:pt-8 lg:pt-10 text-center"
+            aria-labelledby="hero-heading"
           >
-            <p className="font-normal text-white/80 text-[11px] sm:text-sm md:text-xl lg:text-lg leading-relaxed font-league-spartan mb-4 sm:mb-6 md:mb-8 max-w-[95vw] ">
-              In a world where interconnectedness redefines success, NexStar
-              Consulting invites you to lead your company's evolution. Inspired
-              by the natural harmony of ecosystems and humanity's continuous
-              progress, we harness artificial intelligence, SaaS, and blockchain
-              to optimize resources and align your business with a collective
-              purpose.
-          
-              Success is not about being the best—it's about being
-              indispensable: a node that strengthens the network with every
-              interaction.
-            </p>
-            <div className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6 w-full px-2">
-              <a
-                href="#ebook"
-                className="relative bg-white/10 border border-white/20 text-white text-xs sm:text-sm md:text-base px-8 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full font-semibold flex items-center gap-2 hover:bg-white/20 transition duration-150 hover:scale-105"
-              >
-                <span className="absolute -top-[32%] left-3 bg-[#A71414] font-normal font-league-spartan text-white text-[10px] sm:text-xs md:text-xs px-2 py-1 rounded-full">
-                  The New ONE is Us
-                </span>
-                <span className="font-urbanist font-semibold text-[10px] sm:text-xs md:text-xl">
-                  Download our eBook
-                </span>
-
-              </a>
-              <a
-                href="#presentation"
-                className="bg-[#545CF6] hover:bg-[#4F46E5] text-white text-xs sm:text-sm md:text-xl font-league-spartan px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full font-semibold transition duration-150 hover:scale-105"
-              >
-                Schedule a Personalized Presentation
-              </a>
+            {/* We can nest grids for finer control. Here we center the text content. */}
+            {/* It spans 10 columns and starts at column 2, leaving 1 empty column on each side. */}
+            <div className="grid grid-cols-12">
+              <div className="col-span-12 md:col-span-10 md:col-start-2">
+                <div className="max-w-3xl mx-auto">
+                  <p className="text-sm sm:text-xs md:text-sm xl:text-sm 2xl:text-lg uppercase tracking-wider font-league-spartan text-white/80 mb-2 sm:mb-3 md:mb-4">
+                    From operator to owner
+                  </p>
+                  <h1
+                    id="hero-heading"
+                    className="text-3xl sm:text-5xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight font-sora 
+                               bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent
+                               mb-3 sm:mb-4 md:mb-6 text-center"
+                  >
+                    Build a business that <br />
+                    <span className="bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent">
+                      runs without you
+                    </span>
+                  </h1>
+                  <p className="text-[#F0F0F0] font-normal text-sm sm:text-base md:text-xl xl:text-lg 2xl:text-xl font-league-spartan mb-6 sm:mb-8 md:mb-10 mx-auto px-4">
+                    We align purpose and value proposition, design replicable systems, digitize with <b>Zoho</b>, automate with <b>RPA</b>, and apply <b>AI</b> only where it lifts KPIs—so growth is predictable and governed by data.
+                    
+                    to streamline operations and boost ROI in a connected world.
+                  </p>
+                  <a
+                    href="https://nexstar.zohobookings.com/#/4585749000000036002?utm_source=website&utm_medium=embed&utm_campaign=discovery_call"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    role="button"
+                    aria-label="Schedule your consultation to transform your business"
+                    className="inline-block bg-[#545CF6] hover:bg-[#4F46E5] px-6 sm:px-8 md:px-10 py-4 sm:py-4 md:py-4 text-white font-semibold text-sm sm:text-base md:text-xl font-league-spartan rounded-full transition duration-200 shadow-lg shadow-[#5B6FFF]/20 hover:shadow-xl hover:shadow-[#5B6FFF]/30 relative hidden md:inline-block focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(255,255,255,0.7),0_0_0_1px_rgba(84,92,246,0.3)] -mt-4"
+                  >
+                    Schedule a Discovery Call
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[377px] h-1.5 sm:h-2 md:h-2.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-100 blur-md shadow-[0_0_12px_rgba(255,255,255,0.8)]" aria-hidden="true"></div>
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
-        </div>
+
+          {/* Team Image: Also spans the full 12 columns. */}
+          <div className="col-span-12 z-20 flex justify-center mt-8 sm:mt-12 md:mt-15 lg:-mt-2 2xl:mt-2 min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] -translate-y-8 sm:-translate-y-2 md:translate-y-0 sm:pb-8 md:pb-12 lg:pb-16">
+            <picture>
+              <source srcSet="/images/groupimage.webp" type="image/webp" />
+              <Image
+                src="/images/groupimage.png"
+                alt="NexStar team members working together on business transformation projects"
+                width={1200}
+                height={400}
+                priority
+                className="w-full max-w-[110vw] sm:max-w-[95vw] md:max-w-[70vw] lg:max-w-[60vw] xl:max-w-[50vw] object-contain"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 95vw, (max-width: 1024px) 70vw, (max-width: 1280px) 60vw, 50vw"
+              />
+            </picture>
+
+            {/* Mission Section: Unchanged, as it is absolutely positioned relative to the image. The grid is applied *inside* it below. */}
+            <section
+              className="absolute left-1/2 -bottom-30 sm:bottom-8 md:-bottom-14 lg:bottom-6 2xl:-bottom-10 z-30 w-full max-w-[95vw] sm:max-w-5xl lg:max-w-6xl -translate-x-1/2 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center translate-y-12 sm:translate-y-4 md:translate-y-0"
+              aria-labelledby="mission-heading"
+            >
+              <div className="max-w-4xl mx-auto">
+                <h2
+                  id="mission-heading"
+                  className="mt-8 sm:mt-12 md:mt-16 mb-4 max-w-3xl md:max-w-2xl lg:max-w-xl mx-auto text-center capitalize bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent text-3xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl font-semibold font-sora"
+                >
+                  How we make it real
+                </h2>
+
+                <div className="flex flex-col items-center text-center max-w-[95vw] mx-auto">
+                  <p className="font-normal text-white/80 text-[11px] sm:text-sm md:text-xl lg:text-lg leading-relaxed font-league-spartan mb-6">
+                    Purpose & value aligned → replicable systems → <b>Zoho</b> digitization → <b>RPA</b> automation → <b>AI</b> only where it lifts KPIs—so growth is predictable and governed by data.
+                  </p>
+
+                  {/* GRID FOR LIST ITEMS: Replaces flexbox. Each of the 3 items will span 4 columns on desktop (4*3=12) */}
+                  <ul className="grid grid-cols-1 md:grid-cols-12 gap-y-4 md:gap-x-6 list-none text-white/80 text-[11px] sm:text-sm md:text-xl lg:text-lg font-league-spartan">
+                    <li className="md:col-span-4"><strong>Predictable growth:</strong> dashboards and KPIs you manage</li>
+                    <li className="md:col-span-4"><strong>Replicable operations:</strong> SOPs and playbooks everyone follows</li>
+                    <li className="md:col-span-4"><strong>Owner control:</strong> clear rhythms, roles, and accountability</li>
+                  </ul>
+                </div>
+
+                {/* GRID FOR BUTTONS: Replaces flexbox. Each of the 2 buttons will span 6 columns on medium screens. */}
+                <div className="mt-10 sm:mt-8 md:mt-10 lg:mt-12 flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-6 sm:gap-4 md:gap-6 w-full px-4">
+                <a
+                  href="/ebook/book.pdf"
+                  download
+                  className="relative flex items-center gap-4 px-8 sm:px-8 md:px-10 py-2 sm:py-4 md:py-4 border border-[#B6AFFF] rounded-full bg-transparent hover:bg-white/10 transition duration-150 shadow-[0_0_16px_0_rgba(182,175,255,0.12)] font-league-spartan font-semibold text-sm sm:text-base md:text-xl text-white -mt-4"
+                  style={{ boxShadow: '0 0 16px 0 rgba(182,175,255,0.12), 0 2px 12px 0 rgba(255,255,255,0.08) inset' }}
+                >
+                  <span className="absolute -top-2 left-3 bg-[#A71414] font-normal font-league-spartan text-white text-[9px] sm:text-xs md:text-xs px-4 py-0.2 rounded-full shadow-md">
+                    The New ONE is Us
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 28 28"
+                    className="w-4 h-4 md:w-6 md:h-6 text-white stroke-white"
+                    style={{ minWidth: '1.2em' }}
+                    aria-hidden="true"
+                  >
+                    <path d="M14 4v14m0 0l-5-5m5 5l5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <rect x="5" y="20" width="18" height="2" rx="1" fill="currentColor" opacity=".3"/>
+                  </svg>
+                  <span className="font-urbanist font-semibold text-xs sm:text-sm md:text-xl text-white ml-1 ">
+                    Download our eBook
+                  </span>
+                </a>
+                                <a
+                  href="https://nexstar.zohobookings.com/#/4585749000000036002?utm_source=website&utm_medium=embed&utm_campaign=discovery_call"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  role="button"
+                  aria-label="Schedule your consultation to transform your business"
+                  className="inline-block bg-[#545CF6] hover:bg-[#4F46E5] px-6 sm:px-8 md:px-10 py-2 sm:py-4 md:py-4 text-white font-semibold text-sm sm:text-base md:text-xl font-league-spartan  rounded-full transition duration-200 shadow-lg shadow-[#5B6FFF]/20 hover:shadow-xl hover:shadow-[#5B6FFF]/30 relative hidden md:inline-block focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(255,255,255,0.7),0_0_0_1px_rgba(84,92,246,0.3)] -mt-4"
+                >
+                  Schedule a Discovery Call
+                  {/* Bright white light effect at bottom edge - intense center, gradient blur to corners */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[377px] h-1.5 sm:h-2 md:h-2.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-100 blur-md shadow-[0_0_12px_rgba(255,255,255,0.8)]" aria-hidden="true"></div>
+                </a>
+              </div>
+              </div>
+            </section>
+          </div>
+
+        </div> {/* End of Main Grid Container */}
       </div>
-    </div>
+    </main>
   );
 }

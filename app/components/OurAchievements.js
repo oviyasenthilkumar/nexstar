@@ -1,3 +1,5 @@
+
+
 'use client'
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -18,62 +20,84 @@ export default function OurAchievements() {
    }, []);
 
   return (
-    <section className="bg-black text-white relative overflow-hidden min-h-screen">
+    <section 
+      className="bg-black text-white relative overflow-hidden min-h-screen"
+      role="region"
+      aria-labelledby="achievements-heading"
+      aria-label="NexStar achievements and business transformation results"
+    >
       {/* Background */}
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/images/blackbg.png)',
+          backgroundImage: 'url(/images/blackbg.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           minHeight: '100vh',
         }}
+        aria-hidden="true"
       />
 
-      {/* Main Content Container */}
-      <div className="relative z-10 min-h-screen flex flex-col">
-        {" "}
-        <div className="text-center pt-12 sm:pt-16 md:pt-20 px-4">
-          {" "}
-          <h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold mb-4 sm:mb-6"
-            style={{ 
-              fontFamily: "Sora, sans-serif",
-              background: "linear-gradient(90deg, #ffffff 0%, #9E9FA2 50%, #ffffff 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text"
-            }}
-          >
-            {" "}
-            Our Achievements{" "}
-          </h1>{" "}
-          <p
-            className="text-sm sm:text-base md:text-xl lg:text-xl text-gray-300 max-w-2xl mx-auto font-normal"
-            style={{ fontFamily: "League Spartan, sans-serif" }}
-          >
-            {" "}
-            We take pride in transforming businesses through impactful{" "}
-            <br className="hidden sm:block" /> solutions and measurable results.{" "}
-          </p>{" "}
-        </div>{" "}
-        {/* Globe and Statistics Section */}{" "}
+              {/* Main Content Container */}
+        <div className="relative z-10 min-h-screen flex flex-col">
+          <div className="text-center pt-12 sm:pt-16 md:pt-20 px-4">
+            <h1
+              id="achievements-heading"
+              className="text-3xl  max-w-7xl mx-auto sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl font-semibold mb-4 sm:mb-6 font-sora bg-gradient-to-r from-white via-gray-400 to-white bg-clip-text text-transparent"
+            >
+              Our Achievements
+            </h1>
+            <p
+              className="text-sm max-w-3xl mx-auto sm:text-base md:text-xl lg:text-xl xl:text-lg 2xl:text-xl text-gray-300 max-w-2xl mx-auto font-normal font-league-spartan"
+            >
+              We take pride in transforming businesses through impactful
+              <br className="hidden sm:block" /> solutions and measurable results.
+            </p>
+          </div>
+
+          {/* Buttons Section - Moved to top */}
+          <div className="absolute top-113 sm:top-40 md:top-140 lg:top-180 2xl:top-180 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row justify-center items-center gap-7 sm:gap-6 md:gap-8 px-4 z-20 w-full max-w-xs sm:max-w-none">
+            <a
+              href="https://www.linkedin.com/in/miguel-angel-arce-96693954/"
+              target="_blank"
+              rel="noopener noreferrer"
+              role="button"
+              aria-label="Explore insights"
+              className="inline-block relative flex items-center gap-2 px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 border border-[#B6AFFF] rounded-full bg-transparent hover:bg-white/10 transition duration-150 shadow-[0_0_16px_0_rgba(182,175,255,0.12)] font-league-spartan font-semibold text-sm sm:text-base md:text-xl text-white focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(182,175,255,0.7),0_0_0_1px_rgba(182,175,255,0.3)] -mt-4"
+              style={{ boxShadow: '0 0 16px 0 rgba(182,175,255,0.12), 0 2px 12px 0 rgba(255,255,255,0.08) inset' }}
+            >
+              Explore Insights - LinkedIn
+            </a>
+            
+            <a
+              href="https://nexstar.zohobookings.com/#/4585749000000036002?utm_source=website&utm_medium=embed&utm_campaign=discovery_call"
+              target="_blank"
+              rel="noopener noreferrer"
+              role="button"
+              aria-label="Schedule your consultation to transform your business"
+              className="inline-block bg-[#545CF6] hover:bg-[#4F46E5] px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 text-white font-semibold text-sm sm:text-base md:text-xl font-league-spartan rounded-full transition duration-200 shadow-lg shadow-[#5B6FFF]/20 hover:shadow-xl hover:shadow-[#5B6FFF]/30 relative hidden md:inline-block focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(255,255,255,0.7),0_0_0_1px_rgba(84,92,246,0.3)] -mt-4"
+            >
+              Schedule a Discovery Call
+              {/* Bright white light effect at bottom edge - intense center, gradient blur to corners */}
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[377px] h-1.5 sm:h-2 md:h-2.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-100 blur-md shadow-[0_0_12px_rgba(255,255,255,0.8)]" aria-hidden="true"></div>
+            </a>
+          </div>
+        
+        {/* Globe and Statistics Section */}
         <div
-          className=" relative flex items-center justify-center  "
+          className="relative flex items-center justify-center"
           style={{
-            backgroundImage: "url('/images/blackbg.png')",
+            backgroundImage: "url('/images/blackbg.webp')",
             backgroundRepeat: "repeat",
             width: "100%",
-            // backgroundSize: "30px 30px", // make stars tiny
             backgroundPosition: "center top",
           }}
+          aria-hidden="true"
         >
-          {" "}
-          {/* Central Globe */}{" "}
-          <div className="relative w-full flex flex-col justify-center items-center">
-            {" "}
-            <div className="w-64 sm:w-80 md:w-96 lg:w-[700px] 2xl:w-[700px] h-64 sm:h-80 md:h-96 lg:h-[700px] 2xl:h-[700px] rounded-full flex items-center justify-center">
+          {/* Central Globe */}
+          <div className="relative w-full flex flex-col justify-center items-center mt-[-80px] sm:mt-0">
+            <div className="w-64 sm:w-80 md:w-96 lg:w-[700px] 2xl:w-[700px] h-99 sm:h-90 md:h-118 lg:h-[700px] 2xl:h-[700px] rounded-full flex items-center justify-center">
               {" "}
               <Image
                 src="/images/globe-removebg-preview.png"
@@ -81,310 +105,135 @@ export default function OurAchievements() {
                 
                 width={500}
                 height={500}
+                loading="lazy"
+                sizes="(max-width: 640px) 256px, (max-width: 768px) 320px, (max-width: 1024px) 384px, 700px"
                 className="w-full h-full object-contain opacity-80 slow-anticlockwise"
                 style={{ animationDuration: "50s" }}
               />{" "}
             </div>{" "}
-            <div className="flex flex-col flex-wrap md:flex-nowrap justify-center gap-4 md:gap-8 lg:gap-12 absolute top-30 md:top-40 lg:top-60 2xl:top-55 left-0 right-0 w-full bg-[url('/images/black-bg.png')] bg-no-repeat bg-cover bg-center md:py-10 lg:py-30 md:pb-[30rem] lg:pb-[43rem]">
-              {/* First Row - 3 statistics for mobile, all 5 for larger screens */}
+            <div className="flex flex-col flex-wrap md:flex-nowrap justify-center gap-4 md:gap-8 lg:gap-12 absolute top-42 md:top-40 lg:top-60 2xl:top-55 left-0 right-0 w-full bg-[url('/images/black-bg.png')] bg-no-repeat bg-cover bg-center md:py-10 lg:py-30 md:pb-[30rem] lg:pb-[43rem]">
+              {/* First Row - 3 statistics for mobile, all 3 for larger screens */}
               <div className="flex flex-row flex-wrap md:flex-nowrap justify-center gap-4 md:gap-8 lg:gap-12 w-full">
                 {/* Clients Served */}
                 <div className="flex flex-col items-center">
                   <div
-                    className="text-transparent bg-clip-text"
-                    style={{
-                      fontFamily: "Sora, sans-serif",
-                      fontWeight: 700,
-                      fontSize: "clamp(18px, 3.5vw, 60px)", // Reduced from 24px to 18px for mobile
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      background:
-                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      whiteSpace: "nowrap",
-                    }}
+                    className="text-transparent bg-clip-text font-sora font-bold text-[clamp(18px,3.5vw,60px)] leading-[100%] tracking-[0%] bg-gradient-to-r from-[#CCC0FC] via-[#5257C6] to-[#8C83F6] whitespace-nowrap"
                   >
-                    1400+
+                    1,300+
                   </div>
                   <div
-                    className="text-white text-center"
-                    style={{
-                      fontFamily: "League Spartan, sans-serif",
-                      fontWeight: 400,
-                      fontSize: "clamp(12px, 2.5vw, 20px)", // Reduced from 16px to 12px for mobile
-                      lineHeight: "26.53px",
-                      letterSpacing: "0%",
-                    }}
+                    className="text-white text-center max-w-md mt-2 font-league-spartan font-normal text-[clamp(12px,2.5vw,20px)] leading-[26.53px] tracking-[0%]"
                   >
-                    Clients Served
+                    clients served (founders at MDO — Zoho's largest Premium Partner)
                   </div>
                 </div>
 
                 {/* Vertical separator */}
                 <div
-                  className="w-0.5 top-[-10] bg-gray-300 h-14 md:h-20 lg:h-24 self-center relative z-20"
+                  className="hidden sm:block w-0.5 top-[-10] bg-gray-300 h-14 md:h-20 lg:h-24 self-center relative z-20"
                   style={{ minWidth: "1px" }}
+                  aria-hidden="true"
                 ></div>
 
-                {/* Revenue Generated */}
+                {/* Zoho License Sales */}
                 <div className="flex flex-col items-center">
                   <div
-                    className="text-transparent bg-clip-text"
-                    style={{
-                      fontFamily: "Sora, sans-serif",
-                      fontWeight: 700,
-                      fontSize: "clamp(18px, 3.5vw, 60px)", // Reduced from 24px to 18px for mobile
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      background:
-                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      whiteSpace: "nowrap",
-                    }}
+                    className="text-transparent bg-clip-text font-sora font-bold text-[clamp(18px,3.5vw,60px)] leading-[100%] tracking-[0%] bg-gradient-to-r from-[#CCC0FC] via-[#5257C6] to-[#8C83F6] whitespace-nowrap"
                   >
-                    100M+
+                    $2,453,795
                   </div>
                   <div
-                    className="text-white text-center"
-                    style={{
-                      fontFamily: "League Spartan, sans-serif",
-                      fontWeight: 400,
-                      fontSize: "clamp(12px, 2.5vw, 20px)", // Reduced from 16px to 12px for mobile
-                      lineHeight: "26.53px",
-                      letterSpacing: "0%",
-                    }}
+                    className="text-white text-center max-w-md mt-2 font-league-spartan font-normal text-[clamp(12px,2.5vw,20px)] leading-[26.53px] tracking-[0%]"
                   >
-                    Revenue Generated
+                    in Zoho license sales across 27 countries (2024)
                   </div>
                 </div>
 
                 {/* Vertical separator */}
                 <div
-                  className="w-0.5 top-[-10] bg-gray-300 h-14 md:h-20 lg:h-24 self-center relative z-20"
+                  className="w-0.5 top-[-10] bg-gray-300 h-1 md:h-20 lg:h-24 self-center relative z-20"
                   style={{ minWidth: "1px" }}
+                  aria-hidden="true"
                 ></div>
 
-                {/* Projects Completed */}
+                {/* Top Markets */}
                 <div className="flex flex-col items-center">
                   <div
-                    className="text-transparent bg-clip-text"
-                    style={{
-                      fontFamily: "Sora, sans-serif",
-                      fontWeight: 700,
-                      fontSize: "clamp(18px, 3.5vw, 60px)", // Reduced from 24px to 18px for mobile
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      background:
-                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      whiteSpace: "nowrap",
-                    }}
+                    className="text-transparent bg-clip-text font-sora font-bold text-[clamp(18px,3.5vw,60px)] leading-[100%] tracking-[0%] bg-gradient-to-r from-[#CCC0FC] via-[#5257C6] to-[#8C83F6] whitespace-nowrap"
                   >
-                    300+
+                    Top markets
                   </div>
                   <div
-                    className="text-white text-center"
-                    style={{
-                      fontFamily: "League Spartan, sans-serif",
-                      fontWeight: 400,
-                      fontSize: "clamp(12px, 2.5vw, 20px)", // Reduced from 16px to 12px for mobile
-                      lineHeight: "26.53px",
-                      letterSpacing: "0%",
-                    }}
+                    className="text-white text-center max-w-md mt-2 font-league-spartan font-normal text-[clamp(12px,2.5vw,20px)] leading-[26.53px] tracking-[0%]"
                   >
-                    Projects Completed
+                    US, UK, Australia, Canada, South Africa
                   </div>
                 </div>
-
-                {/* Vertical separator - hidden on mobile, visible on larger screens */}
-                <div
-                  className="hidden md:block w-0.5 bg-gray-300 h-16 md:h-20 lg:h-24 self-center relative z-20"
-                  style={{ minWidth: "1px" }}
-                ></div>
-
-                {/* Industry Awards - hidden on mobile, visible on larger screens */}
-                <div className="hidden md:flex flex-col items-center">
-                  <div
-                    className="text-transparent bg-clip-text"
-                    style={{
-                      fontFamily: "Sora, sans-serif",
-                      fontWeight: 700,
-                      fontSize: "clamp(24px, 4vw, 60px)",
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      background:
-                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    150+
-                  </div>
-                  <div
-                    className="text-white text-center"
-                    style={{
-                      fontFamily: "League Spartan, sans-serif",
-                      fontWeight: 400,
-                      fontSize: "clamp(16px, 3.5vw, 20px)",
-                      lineHeight: "26.53px",
-                      letterSpacing: "0%",
-                    }}
-                  >
-                    Industry Awards
-                  </div>
-                </div>
-
-                {/* Vertical separator - hidden on mobile, visible on larger screens */}
-                <div
-                  className="hidden md:block w-0.5 bg-gray-300 h-16 md:h-20 lg:h-24 self-center relative z-20"
-                  style={{ minWidth: "1px" }}
-                ></div>
-
-                {/* Expert Consultants - hidden on mobile, visible on larger screens */}
-                <div className="hidden md:flex flex-col items-center">
-                  <div
-                    className="text-transparent bg-clip-text"
-                    style={{
-                      fontFamily: "Sora, sans-serif",
-                      fontWeight: 700,
-                      fontSize: "clamp(24px, 4vw, 60px)",
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      background:
-                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    200+
-                  </div>
-                  <div
-                    className="text-white text-center"
-                    style={{
-                      fontFamily: "League Spartan, sans-serif",
-                      fontWeight: 400,
-                      fontSize: "20px",
-                      lineHeight: "26.53px",
-                      letterSpacing: "0%",
-                    }}
-                  >
-                    Expert Consultants
-                  </div>
-                </div>
-              </div>
-
-              {/* Second Row - 2 statistics for mobile only */}
-              <div className="flex md:hidden flex-row justify-center gap-4 mt-6">
-                {/* Industry Awards - mobile only */}
-                <div className="flex flex-col items-center">
-                  <div
-                    className="text-transparent bg-clip-text"
-                    style={{
-                      fontFamily: "Sora, sans-serif",
-                      fontWeight: 700,
-                      fontSize: "clamp(18px, 3.5vw, 60px)", // Reduced from 24px to 18px for mobile
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      background:
-                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    150+
-                  </div>
-                  <div
-                    className="text-white text-center"
-                    style={{
-                      fontFamily: "League Spartan, sans-serif",
-                      fontWeight: 400,
-                      fontSize: "clamp(12px, 2.5vw, 20px)", // Reduced from 16px to 12px for mobile
-                      lineHeight: "26.53px",
-                      letterSpacing: "0%",
-                    }}
-                  >
-                    Industry Awards
-                  </div>
-                </div>
-
-                {/* Vertical separator */}
-                <div
-                  className="w-0.5 bg-gray-300 h-14 top-[-10] md:h-20 lg:h-24 self-center relative z-20"
-                  style={{ minWidth: "1px" }}
-                ></div>
-
-                {/* Expert Consultants - mobile only */}
-                <div className="flex flex-col items-center">
-                  <div
-                    className="text-transparent bg-clip-text"
-                    style={{
-                      fontFamily: "Sora, sans-serif",
-                      fontWeight: 700,
-                      fontSize: "clamp(18px, 3.5vw, 60px)", // Reduced from 24px to 18px for mobile
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      background:
-                        "linear-gradient(90deg, #CCC0FC 0%, #5257C6 50%, #8C83F6 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    200+
-                  </div>
-                  <div
-                    className="text-white text-center"
-                    style={{
-                      fontFamily: "League Spartan, sans-serif",
-                      fontWeight: 400,
-                      fontSize: "clamp(12px, 2.5vw, 20px)", // Reduced from 16px to 12px for mobile
-                      lineHeight: "26.53px",
-                      letterSpacing: "0%",
-                    }}
-                  >
-                    Expert Consultants
-                  </div>
-                </div>
+                
               </div>
             </div>
-          </div>{" "}
+          </div>
         </div>
+
         {/* Nautilus Method Section */}
-        <div className="relative py-0 sm:py-12 md:py-0 pt-25 sm:pt-8 md:pt-0">
-          <div className="text-center mb-4 sm:mb-12">
-            <h2
-              className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-semibold mb-4"
-              style={{ fontFamily: "Sora, sans-serif" }}
+        <div className="relative mb-2 md:mb-0 py-0 sm:py-12 md:py-0 pt-25 sm:pt-8 md:pt-0 ">
+          <div className="text-center mb-4 sm:mb-12 ">
+          <h2
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-semibold mb-4 font-sora bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent"
             >
-              The Nautilus Method
-            </h2>
+              The Nautilus Method           </h2>
             <p
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal text-gray-300 mb-6"
-              style={{ fontFamily: "League Spartan, sans-serif" }}
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-semibold mb-4 font-sora bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent"
             >
-              Incremental Growth, Infinite Value
+              Incremental sprints. Compounding value.
             </p>
-            <p
-              className="font-normal px-5 md:px-0 text-sm sm:text-base md:text-xl text-gray-400 md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed"
-              style={{ fontFamily: "League Spartan, sans-serif" }}
+            <div className="px-5 md:px-0 text-center text-gray-400 md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed font-league-spartan">
+              <p className="font-normal text-sm sm:text-base md:text-xl lg:text-xl xl:text-lg 2xl:text-xl mb-6">
+                A practical framework to move from strategy to operation with low risk and measurable impact.
+              </p>
+
+              <ul className="max-w-3xl pl-7 text-left list-disc list-inside space-y-4 font-normal text-sm sm:text-base md:text-xl mx-auto mb-[150]">
+                <li>
+                  <span className="text-[#545CF6]">Diagnose</span> — Align purpose & value prop, map capabilities, set baseline KPIs, 90-day plan.
+                </li>
+                <li>
+                  <span className="text-[#545CF6]">Pilot</span> — Digitize with Zoho, define SOPs, dashboard KPIs; exit only with proven lift.
+                </li>
+                <li>
+                  <span className="text-[#545CF6]">Scale</span> — Roll out across teams; add RPA where it saves time and AI where it lifts KPIs; governance rhythms.
+                </li>
+                <li>
+                  <span className="text-[#545CF6]">Operate</span> — Run by numbers (OKRs/KPIs), quarterly audits, continuous improvement.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="absolute top-140 sm:top-40 md:top-130 lg:top-115 2xl:top-115 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row justify-center items-center gap-7 sm:gap-6 md:gap-8 px-4 z-20 w-full max-w-xs sm:max-w-none">
+            <a
+              href="/ebook/book.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              role="button"
+              aria-label="Explore insights"
+              className="inline-block relative flex items-center gap-2 px-8 sm:px-12 md:px-20 py-3 sm:py-4 md:py-5 border border-[#B6AFFF] rounded-full bg-transparent hover:bg-white/10 transition duration-150 shadow-[0_0_16px_0_rgba(182,175,255,0.12)] font-league-spartan font-semibold text-sm sm:text-base md:text-xl text-white focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(182,175,255,0.7),0_0_0_1px_rgba(182,175,255,0.3)] -mt-4"
+              style={{ boxShadow: '0 0 16px 0 rgba(182,175,255,0.12), 0 2px 12px 0 rgba(255,255,255,0.08) inset' }}
             >
-              Inspired by the natural, spiral growth of the nautilus, the
-              Nautilus Method fosters small, low-risk, high-reward changes that
-              drive continuous evolution for both new and established
-              businesses. This iterative cycle of value creation, delivery, and
-              capture reflects a purposeful pursuit of flourishing (Aristotle)
-              and a harmonious alignment with the ecosystem (Spinoza). Through
-              practical application (Bacon) and constant refinement (Popper), it
-              transforms businesses into resilient nodes, adapting to a dynamic
-              world (Kuhn) while upholding a universal duty to benefit all
-              (Kant).
-            </p>
+              See the Methods
+            </a>
+            
+            <a
+              href="https://nexstar.zohobookings.com/#/4585749000000036002?utm_source=website&utm_medium=embed&utm_campaign=discovery_call"
+              target="_blank"
+              rel="noopener noreferrer"
+              role="button"
+              aria-label="Schedule your consultation to transform your business"
+              className="inline-block bg-[#545CF6] hover:bg-[#4F46E5] px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 text-white font-semibold text-sm sm:text-base md:text-xl font-league-spartan rounded-full transition duration-200 shadow-lg shadow-[#5B6FFF]/20 hover:shadow-xl hover:shadow-[#5B6FFF]/30 relative hidden md:inline-block focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(255,255,255,0.7),0_0_0_1px_rgba(84,92,246,0.3)] -mt-4"
+            >
+              Schedule a Discovery Call
+              {/* Bright white light effect at bottom edge - intense center, gradient blur to corners */}
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[377px] h-1.5 sm:h-2 md:h-2.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-100 blur-md shadow-[0_0_12px_rgba(255,255,255,0.8)]" aria-hidden="true"></div>
+            </a>
           </div>
 
           {/* Nautilus Shell with Value Points */}
@@ -393,215 +242,218 @@ export default function OurAchievements() {
             <div
               className="absolute inset-0 w-full h-full lg:translate-x- snail-bg-mobile snail-bg-tablet snail-bg-desktop snail-bg-large"
               style={{
-                backgroundImage: "url(/snail-img.png)",
+                backgroundImage: "url(/snail-img.webp)",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
               }}
+              aria-hidden="true"
             />
 
             {/* Strategic Value - Top Center with Arrow */}
             <div className="absolute px-2 md:px-0 top-22 md:top-20 lg:top-24 2xl:top-25 sm:top-25 left-70 md:left-130 lg:left-170 2xl:left-220 -translate-x-1/2">
               <div className="text-left md:max-w-64 max-w-40 -mr-9 md:mr-0 -ml-15 md:ml-0">
                 <h3
-                  className="text-sm sm:text-base md:text-lg lg:text-2xl font-semibold mb-2 text-white"
-                  style={{ fontFamily: "Sora, sans-serif" }}
+                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-sora"
                 >
                   Strategic Value
                 </h3>
                 <p
-                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight"
-                  style={{ fontFamily: "League Spartan, sans-serif" }}
+                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight font-league-spartan"
                 >
                   Innovation and market adaptability, fueled by knowledge
                   management and learning as the cornerstone of progress.
                 </p>
               </div>
               {/* Arrow pointing to shell center */}
-
-              <Image
-                className="absolute hidden md:block -bottom-25 md:-bottom-40 lg:-bottom-55 left-18 -translate-x-1/2"
-                src="/images/center-arrow.png"
-                alt="Center Arrow"
-                width={width}
-                height={40}
-              />
+              <picture>
+                <source srcSet="/images/center-arrow.webp" type="image/webp" />
+                <Image
+                  className="absolute hidden md:block -bottom-25 md:-bottom-40 lg:-bottom-55 left-18 -translate-x-1/2"
+                  src="/images/center-arrow.png"
+                  alt="Arrow pointing to strategic value center"
+                  width={width}
+                  height={40}
+                  loading="lazy"
+                  sizes="(max-width: 1024px) 7px, 11px"
+                />
+              </picture>
             </div>
 
             {/* Brand Value - Top Right with Arrow */}
             <div className="absolute px-2 md:px-0 top-65 md:top-55 -right-20  md:-right-25 lg:right-5 2xl:right-110 -translate-x-1/2">
               <div className="text-left md:max-w-56 max-w-35 md:mr-0 -ml-1 md:ml-0">
                 <h3
-                  className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold mb-2 text-white"
-                  style={{ fontFamily: "Sora, sans-serif" }}
-                >
+                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-sora"
+                  >
                   Brand Value
                 </h3>
                 <p
-                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight"
-                  style={{ fontFamily: "League Spartan, sans-serif" }}
+                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight font-league-spartan"
                 >
                   Techniques to build recognition and loyalty, crafting a legacy
                   of trust within the ecosystem.
                 </p>
               </div>
               {/* Arrow pointing to shell */}
-
-              <Image
-                className="absolute top-12 -left-8 md:-left-35 lg:-left-40 lg:top-[80] 2xl:left-[-150] 2xl:top-23 hidden md:block"
-                src="/images/top-right-arrow.png"
-                alt="top right Arrow"
-                width={120}
-                height={40}
-              />
+              <picture>
+                <source srcSet="/images/top-right-arrow.webp" type="image/webp" />
+                <Image
+                  className="absolute top-12 -left-8 md:-left-35 lg:-left-40 lg:top-[80] 2xl:left-[-150] 2xl:top-23 hidden md:block"
+                  src="/images/top-right-arrow.png"
+                  alt="Arrow pointing to brand value section"
+                  width={120}
+                  height={40}
+                  loading="lazy"
+                  sizes="120px"
+                />
+              </picture>
             </div>
 
             {/* Social Value - Bottom Right with Arrow */}
             <div className="absolute px-2 md:px-0 bottom-8 sm:bottom-12 md:bottom-48 lg:bottom-55 2xl:bottom-52 -right-14 sm:right-8 md:right-5 lg:right-29 2xl:right-128">
               <div className="text-left max-w-56">
                 <h3
-                  className="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-2 text-white"
-                  style={{ fontFamily: "Sora, sans-serif" }}
-                >
+                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-sora"
+                  >
                   Social Value
                 </h3>
                 <p
-                  className="text-xs sm:text-sm text-gray-300 leading-tight"
-                  style={{ fontFamily: "League Spartan, sans-serif" }}
+                  className="text-xs sm:text-sm text-gray-300 leading-tight font-league-spartan"
                 >
                   Impact that uplifts society and the environment, embodying
                   ethical responsibility into every action.
                 </p>
               </div>
               {/* Arrow pointing to shell */}
-              <Image
-                className="absolute top-12 -left-8 md:-left-40 lg:-left-50 hidden md:block"
-                src="/images/bottom-right.png"
-                alt="bottom right Arrow"
-                width={150}
-                height={40}
-              />
+              <picture>
+                <source srcSet="/images/bottom-right.webp" type="image/webp" />
+                <Image
+                  className="absolute top-12 -left-8 md:-left-40 lg:-left-50 hidden md:block"
+                  src="/images/bottom-right.png"
+                  alt="Arrow pointing to social value section"
+                  width={150}
+                  height={40}
+                  loading="lazy"
+                  sizes="150px"
+                />
+              </picture>
             </div>
 
             {/* Economic Value - Bottom Left with Arrow */}
             <div className="absolute px-2 md:px-0 bottom-5 sm:bottom-12 md:bottom-35 lg:bottom-45 2xl:bottom-45 left-2 sm:left-8 md:left-15 lg:left-35 2xl:left-90">
               <div className="text-left md:max-w-56 max-w-40">
                 <h3
-                  className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold mb-2 text-white"
-                  style={{ fontFamily: "Sora, sans-serif" }}
-                >
+                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-sora"
+                  >
                   Economic Value
                 </h3>
                 <p
-                  className="text-xs sm:text-sm md:text-base text-gray-300  leading-tight"
-                  style={{ fontFamily: "League Spartan, sans-serif" }}
+                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight font-league-spartan"
                 >
                   Strategies that generate measurable financial gains,
                   optimizing resources for sustainable prosperity.
                 </p>
               </div>
               {/* Arrow pointing to shell */}
-              <Image
-                className="absolute top-12 -left-8 md:left-45 lg:left-55 hidden md:block"
-                src="/images/bottom-left-arrow.png"
-                alt="bottom-left-arrow"
-                width={170}
-                height={40}
-              />
+              <picture>
+                <source srcSet="/images/bottom-left-arrow.webp" type="image/webp" />
+                <Image
+                  className="absolute top-12 -left-8 md:left-45 lg:left-55 hidden md:block"
+                  src="/images/bottom-left-arrow.png"
+                  alt="Arrow pointing to economic value section"
+                  width={170}
+                  height={40}
+                  loading="lazy"
+                  sizes="170px"
+                />
+              </picture>
             </div>
 
             {/* Emotional Value - Left with Arrow */}
             <div className="absolute px-2 md:px-0 top-35 md:top-80 lg:top-80  2xl:top-85 -translate-y-1/2 left-4 sm:left-8 md:left-14 lg:left-50 2xl:left-100">
               <div className="text-left md:max-w-56 max-w-40">
                 <h3
-                  className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold mb-2 text-white"
-                  style={{ fontFamily: "Sora, sans-serif" }}
-                >
+                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-sora"
+                  >
                   Emotional Value
                 </h3>
                 <p
-                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight"
-                  style={{ fontFamily: "League Spartan, sans-serif" }}
+                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight font-league-spartan"o
                 >
                   Memorable experiences that resonate with clients, forging
                   connections beyond transactions.
                 </p>
               </div>
               {/* Arrow pointing to shell */}
-              <Image
-                className="absolute top-12  -left-8 md:left-50 lg:left-50 hidden md:block"
-                src="/images/top-left-arrow.png"
-                alt="bottom right Arrow"
-                width={150}
-                height={40}
-              />
+              <picture>
+                <source srcSet="/images/top-left-arrow.webp" type="image/webp" />
+                <Image
+                  className="absolute top-12  -left-8 md:left-50 lg:left-50 hidden md:block"
+                  src="/images/top-left-arrow.png"
+                  alt="Arrow pointing to emotional value section"
+                  width={150}
+                  height={40}
+                  loading="lazy"
+                  sizes="150px"
+                />
+              </picture>
             </div>
           </div>
         </div>
+        
         {/* Bottom Scrolling Text */}
-        <div className="bg-[linear-gradient(90deg,#545CF6_0%,#5257C6_50%,_#545CF6_100%)] py-4 overflow-hidden">
+        <div className="bg-[linear-gradient(90deg,#545CF6_0%,#5257C6_50%,_#545CF6_100%)] py-4 overflow-hidden" aria-hidden="true">
           <div className="flex whitespace-nowrap animate-scroll">
             <span
-              className="text-lg sm:text-xl font-semibold px-8"
-              style={{ fontFamily: "sora, sans-serif" }}
+              className="text-lg sm:text-xl font-semibold px-8 font-sora"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8"
-              style={{ fontFamily: "sora, sans-serif" }}
+              className="text-lg sm:text-xl font-semibold px-8 font-sora"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8"
-              style={{ fontFamily: "sora, sans-serif" }}
+              className="text-lg sm:text-xl font-semibold px-8 font-sora"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8"
-              style={{ fontFamily: "sora, sans-serif" }}
+              className="text-lg sm:text-xl font-semibold px-8 font-sora"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8"
-              style={{ fontFamily: "sora, sans-serif" }}
+              className="text-lg sm:text-xl font-semibold px-8 font-sora"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8"
-              style={{ fontFamily: "sora, sans-serif" }}
+              className="text-lg sm:text-xl font-semibold px-8 font-sora"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8"
-              style={{ fontFamily: "sora, sans-serif" }}
+              className="text-lg sm:text-xl font-semibold px-8 font-sora"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8"
-              style={{ fontFamily: "sora, sans-serif" }}
+              className="text-lg sm:text-xl font-semibold px-8 font-sora"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
           </div>
         </div>
-
-
-
-
       </div>
 
       <style jsx>{`
