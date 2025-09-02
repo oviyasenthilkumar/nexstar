@@ -1,8 +1,8 @@
 export default function CommunityPatreon() {
     return (
-      <section id="community" className="w-full py-16 bg-gradient-to-b from-[#f6f8ff] to-white flex flex-col items-center justify-center">
+      <section id="community" className="w-full py-10 bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center" style={{backgroundImage: "url('/images/blackbg.webp')"}}>
         <div className="flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-center">
-          <h2 className="text-black font-sora text-[28px] sm:text-[32px] md:text-[48px] font-semibold mb-4 w-full leading-[35px] md:leading-[44px] whitespace-normal md:whitespace-nowrap">
+          <h2 className="text-white font-sora text-[28px] sm:text-[32px] md:text-[48px] font-semibold mb-4 w-full leading-[35px] md:leading-[44px] whitespace-normal md:whitespace-nowrap">
             Join the NexStar Community
           </h2>
           <p className="text-lg md:text-2xl px-2 md:px-0 font-league-spartan text-[#6C6C6C] mb-8">
