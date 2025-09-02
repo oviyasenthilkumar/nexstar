@@ -1,3 +1,5 @@
+
+
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -104,7 +106,7 @@ const Subscribe = () => {
           className="max-w-2xl mx-auto"
           aria-labelledby="subscribe-heading"
         >
-          <div className="flex flex-col sm:flex-row justify-center items-center bg-transparent border border-white/30 rounded-2xl sm:rounded-full p-3 sm:p-2 gap-3 sm:gap-0 transition-all duration-300">
+          <div className="flex flex-col sm:flex-row justify-center items-center bg-transparent border border-white/30 rounded-2xl sm:rounded-full p-3 sm:p-2 gap-3 sm:gap-0  transition-all duration-300">
             <div className="w-full sm:flex-1">
               <label htmlFor="email-input" className="sr-only">Email Address</label>
               <input
@@ -116,7 +118,7 @@ const Subscribe = () => {
                 required
                 aria-required="true"
                 aria-describedby="email-help"
-                className="w-full px-5 py-3 sm:px-6 sm:py-4 bg-transparent text-white placeholder-white/70 outline-none text-lg sm:text-lg font-league-spartan rounded-xl sm:rounded-full border-none mb-2 sm:mb-0"
+                className="w-full px-5 py-3 sm:px-6 sm:py-4 bg-transparent text-white placeholder-white/70  text-lg sm:text-lg font-league-spartan  sm:rounded-full border-none mb-2 sm:mb-0"
               />
               <div id="email-help" className="sr-only">
                 Enter your email address to subscribe to our newsletter
@@ -127,7 +129,7 @@ const Subscribe = () => {
               type="submit"
               disabled={isSubscribed}
               aria-label={isSubscribed ? "Successfully subscribed" : "Subscribe to newsletter"}
-              className="w-full sm:w-auto rounded-xl sm:rounded-full bg-[#545CF6] text-white font-league-spartan font-semibold text-lg sm:text-xl px-8 sm:px-12 py-3 sm:py-4 shadow-[0_0_24px_0_rgba(108,92,231,0.4)] transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-2 focus:ring-offset-black hover:scale-105 whitespace-nowrap relative overflow-hidden flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full sm:w-auto rounded-xl sm:rounded-full bg-[#545CF6] text-white font-league-spartan font-semibold text-lg sm:text-xl px-8 sm:px-12 py-3 sm:py-4 shadow-[0_0_24px_0_rgba(108,92,231,0.4)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#6C5CE7] focus:ring-offset-2 focus:ring-offset-black hover:scale-105 whitespace-nowrap relative overflow-hidden flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
             >
               <span className="relative z-10">
                 {isSubscribed ? "Subscribed!" : "Subscribe"}
@@ -141,7 +143,7 @@ const Subscribe = () => {
         {/* Success Message */}
         {isSubscribed && (
           <div 
-            className="mt-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-300"
+            className="mt-6 p-4 bg-blue-500/20 border border-blue-500/30 rounded-lg text-white-300"
             role="alert"
             aria-live="polite"
             aria-label="Subscription successful"
@@ -156,13 +158,13 @@ const Subscribe = () => {
         {/* Floating particles */}
         {particles.map((particle, i) => (
           <div
-            key={particle-${i}}
+            key={`particle-${i}`}
             className="absolute w-2 h-2 bg-purple-400/30 rounded-full animate-pulse"
             style={{
-              left: ${particle.left}%,
-              top: ${particle.top}%,
-              animationDelay: ${particle.delay}s,
-              animationDuration: ${particle.duration}s,
+              left: `${particle.left}%`,
+              top: `${particle.top}%`,
+              animationDelay: `${particle.delay}s`,
+              animationDuration: `${particle.duration}s`,
             }}
           ></div>
         ))}
