@@ -91,15 +91,14 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="NexStar Consulting" />
-        <link rel="apple-touch-icon" href="/images/logo.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png" />
+  {/* Prevent favicon by setting an empty icon link */}
+  <link rel="icon" href="data:," />
         
         {/* JSON-LD Schema Markup */}
         <StructuredData />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${leagueSpartan.variable} ${sora.variable} antialiased`}
+        className={${geistSans.variable} ${geistMono.variable} ${leagueSpartan.variable} ${sora.variable} antialiased}
       >
         {children}
       </body>
