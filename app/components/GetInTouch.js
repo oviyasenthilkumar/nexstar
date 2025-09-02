@@ -34,6 +34,7 @@ export default function GetInTouch() {
   const [submitted, setSubmitted] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [showCountryDropdown, setShowCountryDropdown] = useState(false);
+  const [countrySearch, setCountrySearch] = useState("");
 
   // Refs for dropdowns
   const countryDropdownRef = useRef(null);
@@ -49,6 +50,36 @@ export default function GetInTouch() {
   const selectedCountry =
     countries.find((c) => c.code === form.country) || countries[0];
   const flag = emojiFlags.countryCode(selectedCountry.code).emoji;
+
+  // Filter countries based on search
+  const filteredCountries = countries.filter((country) =>
+    country.name.toLowerCase().includes(countrySearch.toLowerCase()) ||
+    country.code.toLowerCase().includes(countrySearch.toLowerCase())
+  );
+
+  // Phone number formatting function
+  const formatPhoneNumber = (value, countryCode) => {
+    const phoneFormats = {
+      US: (val) => val.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3'),
+      IN: (val) => val.replace(/(\d{5})(\d{5})/, '$1 $2'),
+      UK: (val) => val.replace(/(\d{4})(\d{3})(\d{3})/, '$1 $2 $3'),
+      AE: (val) => val.replace(/(\d{3})(\d{3})(\d{3})/, '$1 $2 $3'),
+      AU: (val) => val.replace(/(\d{4})(\d{3})(\d{3})/, '$1 $2 $3'),
+      CA: (val) => val.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3'),
+      DE: (val) => val.replace(/(\d{3})(\d{3})(\d{5})/, '$1 $2 $3'),
+      FR: (val) => val.replace(/(\d{2})(\d{2})(\d{2})(\d{2})(\d{1})/, '$1 $2 $3 $4 $5'),
+      IT: (val) => val.replace(/(\d{3})(\d{3})(\d{4})/, '$1 $2 $3'),
+      JP: (val) => val.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3'),
+      RU: (val) => val.replace(/(\d{3})(\d{3})(\d{4})/, '$1 $2 $3'),
+      SA: (val) => val.replace(/(\d{3})(\d{3})(\d{3})/, '$1 $2 $3'),
+      SG: (val) => val.replace(/(\d{4})(\d{4})/, '$1 $2'),
+      ZA: (val) => val.replace(/(\d{3})(\d{3})(\d{3})/, '$1 $2 $3'),
+      MX: (val) => val.replace(/(\d{3})(\d{3})(\d{4})/, '$1 $2 $3'),
+    };
+    
+    const formatter = phoneFormats[countryCode];
+    return formatter ? formatter(value) : value;
+  };
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -158,7 +189,7 @@ export default function GetInTouch() {
                 required
               />
               {/* Phone with Country */}
-              <div ref={countryDropdownRef} className="flex items-center border-b border-gray-300 focus-within:border-[#3B4FFF] relative">
+              <div ref={countryDropdownRef} className="flex items-center border-b border-gray-300 relative">
                 <button
                   type="button"
                   className="flex items-center mr-2 px-2 py-1 rounded"
@@ -181,40 +212,61 @@ export default function GetInTouch() {
                   </svg>
                 </button>
                 {showCountryDropdown && (
-                  <ul className="absolute left-0 top-10 z-20 bg-white border border-gray-200 rounded-lg shadow max-h-60 overflow-y-auto w-56">
-                    {countries.map((c) => (
-                      <li
-                        key={c.code}
-                        className="flex items-center px-4 py-2 hover:bg-[#f6f8ff] cursor-pointer"
-                        onClick={() => {
-                          setForm({ ...form, country: c.code });
-                          setShowCountryDropdown(false);
-                        }}
-                      >
-                        <span className="mr-2">{emojiFlags.countryCode(c.code).emoji}</span>
-                        <span className="mr-2 text-gray-500">{c.name}</span>
-                        <span className="mr-2 text-gray-500">({c.code})</span>
-                        <span className="text-gray-500">{c.dialCode}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="absolute left-0 top-10 z-20 bg-white border border-gray-200 rounded-lg shadow w-80">
+                    {/* Search Input */}
+                    <div className="p-3 border-b border-gray-100">
+                      <input
+                        type="text"
+                        placeholder="Search countries..."
+                        value={countrySearch}
+                        onChange={(e) => setCountrySearch(e.target.value)}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3B4FFF] focus:border-transparent text-sm text-gray-800"
+                        onClick={(e) => e.stopPropagation()}
+                      />
+                    </div>
+                    {/* Countries List */}
+                    <ul className="max-h-60 overflow-y-auto">
+                      {filteredCountries.length > 0 ? (
+                        filteredCountries.map((c) => (
+                          <li
+                            key={c.code}
+                            className="flex items-center px-4 py-2 hover:bg-[#f6f8ff] cursor-pointer"
+                            onClick={() => {
+                              setForm({ ...form, country: c.code });
+                              setShowCountryDropdown(false);
+                              setCountrySearch("");
+                            }}
+                          >
+                            <span className="mr-2">{emojiFlags.countryCode(c.code).emoji}</span>
+                            <span className="mr-2 text-gray-500">{c.name}</span>
+                            <span className="mr-2 text-gray-500">({c.code})</span>
+                            <span className="text-gray-500">{c.dialCode}</span>
+                          </li>
+                        ))
+                      ) : (
+                        <li className="px-4 py-2 text-gray-500 text-center">
+                          No countries found
+                        </li>
+                      )}
+                    </ul>
+                  </div>
                 )}
                 <input
                   type="tel"
                   placeholder="Phone Number"
-                  value={form.phone}
+                  value={formatPhoneNumber(form.phone, selectedCountry.code)}
                   maxLength={(() => {
                     // Add more countries as needed
-                    const countryPhoneLengths = { IN: 10, US: 10, UK: 10, AE: 9, AU: 9, CA: 10, DE: 11, FR: 9, IT: 10, JP: 10, RU: 10, SA: 9, SG: 8, ZA: 9 };
+                    const countryPhoneLengths = { IN: 10, US: 10, UK: 10, AE: 9, AU: 9, CA: 10, DE: 11, FR: 9, IT: 10, JP: 10, RU: 10, SA: 9, SG: 8, ZA: 9, MX: 10 };
                     return countryPhoneLengths[selectedCountry.code] || 15;
                   })()}
                   pattern={`\\d{${(() => {
-                    const countryPhoneLengths = { IN: 10, US: 10, UK: 10, AE: 9, AU: 9, CA: 10, DE: 11, FR: 9, IT: 10, JP: 10, RU: 10, SA: 9, SG: 8, ZA: 9 };
+                    const countryPhoneLengths = { IN: 10, US: 10, UK: 10, AE: 9, AU: 9, CA: 10, DE: 11, FR: 9, IT: 10, JP: 10, RU: 10, SA: 9, SG: 8, ZA: 9, MX: 10 };
                     return countryPhoneLengths[selectedCountry.code] || 15;
                   })()}}`}
                   onChange={(e) => {
                     // Only allow digits and limit length
-                    const countryPhoneLengths = { IN: 10, US: 10, UK: 10, AE: 9, AU: 9, CA: 10, DE: 11, FR: 9, IT: 10, JP: 10, RU: 10, SA: 9, SG: 8, ZA: 9 };
+                    const countryPhoneLengths = { IN: 10, US: 10, UK: 10, AE: 9, AU: 9, CA: 10, DE: 11, FR: 9, IT: 10, JP: 10, RU: 10, SA: 9, SG: 8, ZA: 9, MX: 10 };
                     const maxLen = countryPhoneLengths[selectedCountry.code] || 15;
                     let val = e.target.value.replace(/[^0-9]/g, "");
                     if (val.length > maxLen) val = val.slice(0, maxLen);
