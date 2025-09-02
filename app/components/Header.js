@@ -92,7 +92,7 @@ export default function Header() {
         {/* Hamburger Button for Mobile */}
         <button
           ref={hamburgerRef}
-          className="md:hidden flex flex-col justify-center items-center w-10 h-10 "
+          className="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -194,7 +194,7 @@ export default function Header() {
               </div>
               {/* X Close Icon */}
               <button
-                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center "
+                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center focus:outline-none"
                 aria-label="Close navigation menu"
                 onClick={handleClose}
                 tabIndex={0}
