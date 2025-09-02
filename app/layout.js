@@ -99,7 +99,7 @@ export default function RootLayout({ children }) {
         <StructuredData />
       </head>
       <body
-        className={${geistSans.variable} ${geistMono.variable} ${leagueSpartan.variable} ${sora.variable} antialiased}
+        className={`${geistSans.variable} ${geistMono.variable} ${leagueSpartan.variable} ${sora.variable} antialiased`}
       >
         {children}
       </body>
