@@ -206,7 +206,7 @@ export default function Header() {
               <div className="w-full flex justify-center z-10 relative mt-2 mb-8">
                 <a href="#home" aria-label="Go to homepage">
                   <picture>
-                    <source srcSet="/Logo.webp" type="image/webp" />
+                    <source srcSet="/logo.webp" type="image/webp" />
                     <Image
                       src="/Logo.png"
                       alt="NexStar Consulting Logo - Click to go to homepage"
