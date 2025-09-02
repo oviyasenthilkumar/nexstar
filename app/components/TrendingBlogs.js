@@ -108,7 +108,7 @@ export default function TrendingBlogs() {
       </p>
 
       <div
-        className="grid grid-cols-12 gap-8 w-full max-w-6xl px-4"
+        className="grid grid-cols-12 gap-4 sm:gap-8 w-full max-w-6xl px-4 sm:px-4"
         role="list"
         aria-label="List of trending blog posts"
       >
