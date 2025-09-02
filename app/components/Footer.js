@@ -90,7 +90,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#about"
                   className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
                   aria-label="Learn more about NexStar Consulting"
                 >
@@ -99,7 +99,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#services"
                   className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
                 >
                   Services
@@ -107,7 +107,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#contact"
                   className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
                   aria-label="Contact NexStar Consulting"
                 >
@@ -132,7 +132,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/ebook/book.pdf"
                   className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
                   aria-label="Access our knowledge base and books"
                 >
@@ -152,7 +152,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#blogs"
                   className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
                   aria-label="Read our latest blog posts"
                 >
@@ -229,7 +229,7 @@ const Footer = () => {
             {/* Social Media Icons */}
             <div className="flex items-center gap-4">
               <Link
-                href="#"
+                href="https://www.linkedin.com/in/miguel-angel-arce-96693954/"
                 className="w-10 h-10 bg-[#545CF6] rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
                 aria-label="Follow us on LinkedIn"
               >
