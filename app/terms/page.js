@@ -2,7 +2,8 @@
 
 export default function TermsConditions() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12 font-['League_Spartan'] text-gray-800 leading-relaxed bg-white">
+    <div className="bg-white min-h-screen w-full">
+      <div className="max-w-4xl mx-auto px-6 py-12 font-['League_Spartan'] text-gray-800 leading-relaxed">
       {/* Header Section */}
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Terms & Conditions</h1>
@@ -152,6 +153,7 @@ export default function TermsConditions() {
         </a>{" "}
         (legal notices).
       </p>
+      </div>
     </div>
   );
 }
