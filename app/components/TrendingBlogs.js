@@ -91,7 +91,7 @@ export default function TrendingBlogs() {
 
   return (
     <section
-      className="w-full py-16 bg-gradient-to-b from-white to-[#f6f8ff] flex flex-col items-center"
+      className="w-full py-23 bg-gradient-to-b from-white to-[#f6f8ff] flex flex-col items-center"
       role="region"
       aria-labelledby="trending-blogs-heading"
       aria-label="Trending blog posts and industry insights from NexStar"
