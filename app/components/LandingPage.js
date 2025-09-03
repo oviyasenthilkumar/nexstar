@@ -77,7 +77,7 @@ export default function Home() {
             <div className="grid grid-cols-12">
               <div className="col-span-12 md:col-span-10 md:col-start-2">
                 <div className="max-w-3xl mx-auto">
-                  <p className="text-sm sm:text-xs md:text-sm xl:text-sm 2xl:text-lg uppercase tracking-wider font-league-spartan text-white/80 mb-2 sm:mb-3 md:mb-4">
+                  <p className="text-sm mt-10 sm:text-xs md:text-sm xl:text-sm 2xl:text-lg uppercase tracking-wider font-league-spartan text-white/80 mb-2 sm:mb-3 md:mb-4">
                     From operator to owner
                   </p>
                   <h1
