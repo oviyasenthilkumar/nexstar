@@ -221,7 +221,7 @@ const Footer = () => {
                   </svg>
                 </div>
                 <span className="text-white font-medium font-urbanist text-lg">
-                  Phone: <a href="tel:+919996543210" className="hover:text-[#545CF6] transition-colors ">+91 9996543210</a>
+                  Phone: <a href="tel: +52 33 23228272" className="hover:text-[#545CF6] transition-colors "> +52 33 23228272</a>
                 </span>
               </div>
             </div>
@@ -244,7 +244,7 @@ const Footer = () => {
                 </svg>
               </Link>
               <Link
-                href="#"
+                href=" https://x.com/MiguelAngelArce "
                 className="w-10 h-10 bg-[#545CF6] rounded-full flex items-center justify-center  transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
                 aria-label="Follow us on Twitter/X"
               >
