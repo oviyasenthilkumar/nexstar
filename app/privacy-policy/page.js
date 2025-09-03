@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
         />
       </Head>
 
-      <main className="max-w-4xl mx-auto px-6 py-12 font-['League_Spartan'] text-gray-800 leading-relaxed min-h-screen">
+      <main className="max-w-4xl mx-auto px-6 py-12 font-['League_Spartan'] text-gray-800 leading-relaxed min-h-screen mt-10">
         {/* Hero */}
         <section className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4 ">Privacy Policy</h1>
