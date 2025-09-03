@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, League_Spartan, Sora } from "next/font/google";
 import "./globals.css";
 import StructuredData from "./components/StructuredData";
+import Header from "./components/Header";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -101,6 +102,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${leagueSpartan.variable} ${sora.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
