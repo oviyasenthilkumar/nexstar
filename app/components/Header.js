@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -64,12 +65,8 @@ export default function Header() {
 
   return (
     <header 
-      className="leagueSpartan text-white px-4 sm:px-6 md:px-10 py-2 sm:py-4 fixed top-0 left-0 w-full z-50 shadow-md"
-      style={{
-        background: 'linear-gradient(90deg, rgba(24,26,42,0.96) 60%, rgba(84,92,246,0.85) 100%)',
-        backdropFilter: 'blur(4px)',
-        WebkitBackdropFilter: 'blur(4px)'
-      }}
+      className="leagueSpartan text-white px-4 sm:px-6 md:px-10 py-2 sm:py-4 fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-[#191B2B] via-[#23254A] to-[#545CF6]"
+      style={{background: 'linear-gradient(90deg, #191B2B 0%, #23254A 60%, #545CF6 100%)', borderBottom: '1px solid rgba(255,255,255,0.18)'}}
       role="banner"
       aria-label="Main navigation header for NexStar Consulting"
     >
