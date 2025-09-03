@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -65,7 +64,12 @@ export default function Header() {
 
   return (
     <header 
-      className="leagueSpartan bg-transparent text-white px-4 sm:px-6 md:px-10 py-2 sm:py-4 relative z-50"
+      className="leagueSpartan text-white px-4 sm:px-6 md:px-10 py-2 sm:py-4 fixed top-0 left-0 w-full z-50 shadow-md"
+      style={{
+        background: 'linear-gradient(90deg, rgba(24,26,42,0.96) 60%, rgba(84,92,246,0.85) 100%)',
+        backdropFilter: 'blur(4px)',
+        WebkitBackdropFilter: 'blur(4px)'
+      }}
       role="banner"
       aria-label="Main navigation header for NexStar Consulting"
     >
@@ -74,7 +78,7 @@ export default function Header() {
         <div className="flex-shrink-0">
           <a href="#home" aria-label="Go to homepage">
             <picture>
-              <source srcSet="/logo.webp" type="image/webp" />
+              <source srcSet="/Logo.webp" type="image/webp" />
               <Image
                 src="/Logo.png"
                 alt="NexStar Consulting Logo - Click to go to homepage"
@@ -92,7 +96,7 @@ export default function Header() {
         {/* Hamburger Button for Mobile */}
         <button
           ref={hamburgerRef}
-          className="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
+          className="md:hidden flex flex-col justify-center items-center w-10 h-10 "
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -111,35 +115,35 @@ export default function Header() {
         >
           <a 
             href="#about" 
-            className="text-base text-white font-regular font-league-spartan hover:text-[#545CF6] transition-colors "
+            className="text-base text-white font-regular font-league-spartan  transition-colors "
             aria-label="Go to About Us section"
           >
             About Us
           </a>
           <a 
             href="#services" 
-            className="text-base text-white font-regular font-league-spartan hover:text-[#545CF6] transition-colors "
+            className="text-base text-white font-regular font-league-spartan  transition-colors "
             aria-label="Go to Services section"
           >
             Services
           </a>
           <a 
             href="/ebook/book.pdf" 
-            className="text-base text-white font-regular font-league-spartan hover:text-[#545CF6] transition-colors "
+            className="text-base text-white font-regular font-league-spartan  transition-colors "
             aria-label="Go to BOSZ methodology section"
           >
             Book
           </a>
           <a 
             href="#services" 
-            className="text-base text-white font-regular font-league-spartan hover:text-[#545CF6] transition-colors "
+            className="text-base text-white font-regular font-league-spartan  transition-colors "
             aria-label="Go to GoZen platform section"
           >
             GoZen
           </a>
           <a 
             href="#blogs" 
-            className="text-base text-white font-regular font-league-spartan hover:text-[#545CF6] transition-colors "
+            className="text-base text-white font-regular font-league-spartan  transition-colors "
             aria-label="Go to Blogs and insights section"
           >
             Blogs
@@ -194,7 +198,7 @@ export default function Header() {
               </div>
               {/* X Close Icon */}
               <button
-                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center focus:outline-none"
+                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center "
                 aria-label="Close navigation menu"
                 onClick={handleClose}
                 tabIndex={0}
@@ -206,7 +210,7 @@ export default function Header() {
               <div className="w-full flex justify-center z-10 relative mt-2 mb-8">
                 <a href="#home" aria-label="Go to homepage">
                   <picture>
-                    <source srcSet="/logo.webp" type="image/webp" />
+                    <source srcSet="/Logo.webp" type="image/webp" />
                     <Image
                       src="/Logo.png"
                       alt="NexStar Consulting Logo - Click to go to homepage"
