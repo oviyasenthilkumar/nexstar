@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Solution = () => {
   return (
     <div 
-      className="relative min-h-[79vh] sm:min-h-[75vh] md:min-h-[50vh] lg:min-h-[85vh] xl:min-h-[100vh] 2xl:min-h-[95vh] overflow-hidden flex items-start justify-center bg-cover bg-center bg-no-repeat pt-20 bg-gradient-to-b from-black/40 via-black/20 to-transparent 
+      className="relative min-h-[85vh] sm:min-h-[75vh] md:min-h-[50vh] lg:min-h-[85vh] xl:min-h-[100vh] 2xl:min-h-[90vh] 3xl:min-h-[75vh] overflow-hidden flex items-start justify-center bg-cover bg-center bg-no-repeat pt-20 bg-gradient-to-b from-black/40 via-black/20 to-transparent 
       bg-[url('/images/blackbg.png')]"
     >
       {/* Dark overlay for better text readability */}
@@ -53,24 +53,16 @@ const Solution = () => {
         <h1 
   className="mb-4 max-w-3xl md:max-w-2xl lg:max-w-xl mx-auto text-center capitalize 
              bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent
-             text-3xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-4xl 2xl:text-5xl font-semibold font-sora"
+              text-3xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-4xl 2xl:text-5xl 3xl:text-[clamp(2.25rem,2vw+1.5rem,3rem)] font-semibold font-serif"
 >
-Conscious solutions. Measurable value.
+Transform Operations with AI + Zoho. Measurable value.
 </h1>
 
         
         {/* Description */}
         <p 
-          className="text-[#F0F0F0] max-w-3xl md:max-w-2xl lg:max-w-xl mx-auto"
-          style={{
-            fontFamily: 'League Spartan',
-            fontWeight: 400,
-            fontStyle: 'normal',
-            fontSize: '16px',
-            lineHeight: '19px',
-            letterSpacing: '0%',
-            textAlign: 'center'
-          }}
+          className=" max-w-prose  mx-auto text-base 3xl:text-[clamp(1rem,0.5vw+0.875rem,1.125rem)] text-gray-300 max-w-2xl mx-auto font-normal font-sans"
+          
         >
          Nautilus Method — <b>Diagnose</b> → <b>Pilot</b> → <b>Scale</b> → <b>Operate</b>. We align purpose, build replicable systems, digitize with <b>Zoho</b>, automate with <b>RPA</b>, and apply <b>AI</b> only where it lifts KPIs—so value grows predictably.
         </p>
