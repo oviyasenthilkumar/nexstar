@@ -62,11 +62,11 @@ const TrustedPartners = () => {
         <div className="text-center mb-16 md:mb-10 pt-8 md:pt-12 lg:pt-16">
           <h2 
             id="trusted-partners-heading"
-            className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-black mb-6 md:mb-8 font-sora"
+            className="text-3xl lg:text-4xl xl:text-5xl 3xl:text-[clamp(2.25rem,2vw+1.5rem,3rem)] font-semibold text-black mb-6 md:mb-8 font-serif"
           >
             Trusted Partnerships
           </h2>
-          <p className="text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed text-center font-normal pl-4 sm:pl-6 md:pl-30 pr-4 sm:pr-6 md:pr-30 font-league-spartan text-[#6C6C6C]">
+          <p className="text-lg lg:text-xl max-w-prose 3xl:text-[clamp(1rem,0.5vw+0.875rem,1.125rem)] mx-auto leading-relaxed text-center font-normal pl-4 sm:pl-6 md:pl-30 pr-4 sm:pr-6 md:pr-30 font-sans text-[#6C6C6C]">
             We collaborate with leading platforms and technologies, including Zoho, SAP, Microsoft, and OpenAI, to deliver comprehensive solutions tailored to your business needs.
           </p>
         </div>
