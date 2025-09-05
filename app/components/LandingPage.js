@@ -6,7 +6,7 @@ import Header from "./Header";
 export default function Home() {
   return (
     <main
-      className="relative text-white bg-cover bg-center h-[110vh] md:h-[106vh] lg:h-[130vh] xl:h-[155vh] 2xl:h-[145vh]"
+      className="relative text-white bg-cover bg-center h-[117vh] md:h-[106vh] lg:h-[130vh] xl:h-[155vh] 2xl:h-[145vh]"
       style={{
         backgroundImage: "url('/images/Solution.webp')",
       }}
