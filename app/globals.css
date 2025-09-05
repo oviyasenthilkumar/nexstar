@@ -43,7 +43,7 @@ body {
 @media (max-width: 639px) { /* Mobile: <640px */
   .custom-curve-bg {
     background-position: center 100;     /* Center horizontally, top vertically */
-    background-size: 100% 65%;         /* Cover 65% of the container height */
+    background-size: 100% 45%;         /* Cover 65% of the container height */
   }
 }
 
