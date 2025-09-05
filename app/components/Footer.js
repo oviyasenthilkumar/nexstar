@@ -26,7 +26,7 @@ const Footer = () => {
                 />
               </picture>
             </div>
-            <p className="text-gray-300 font-league-spartan text-sm md:text-base font-light leading-relaxed max-w-sm">
+            <p className="text-gray-300 font-sans text-sm md:text-base font-light leading-relaxed max-w-sm">
               From operator to owner. We build replicable systems, digitize on Zoho, automate with RPA, and apply AI only where it lifts KPIs—so growth is predictable and governed by data.
               Dubai-based, serving clients worldwide.
             </p>
@@ -39,7 +39,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Learn more about ZOHO Implementation services"
                 >
                   ZOHO Implementation
@@ -48,7 +48,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Learn more about RPA Implementation services"
                 >
                   RPA Implementation
@@ -57,7 +57,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Learn more about Applied AI services"
                 >
                   Applied AI
@@ -66,7 +66,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Learn more about GoZen platform"
                 >
                   GoZen
@@ -82,7 +82,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Go to homepage"
                 >
                   Home
@@ -91,7 +91,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#about"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Learn more about NexStar Consulting"
                 >
                   About Us
@@ -100,7 +100,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#services"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                 >
                   Services
                 </Link>
@@ -108,7 +108,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#contact"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Contact NexStar Consulting"
                 >
                   Contact Us
@@ -124,7 +124,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Learn about BOSZ methodology"
                 >
                   BOSZ
@@ -133,7 +133,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/ebook/book.pdf"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Access our knowledge base and books"
                 >
                   Books
@@ -144,7 +144,7 @@ const Footer = () => {
                   href="https://www.patreon.com/MetodoNautilusdelValor_ComunidadNexStar?utm_source=chatgpt.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Join our community"
                 >
                   Community
@@ -153,7 +153,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#blogs"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Read our latest blog posts"
                 >
                   Blogs
@@ -169,7 +169,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/privacy-policy"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Read our privacy policy"
                 >
                   Privacy Policy
@@ -178,7 +178,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/terms"
-                  className="text-[#808080] text-base font-league-spartan font-normal hover:text-white transition-colors text-sm "
+                  className="text-[#808080] text-base font-sans font-normal hover:text-white transition-colors text-sm "
                   aria-label="Read our terms and conditions"
                 >
                   Terms and Conditions
@@ -280,13 +280,13 @@ const Footer = () => {
         {/* Copyright and Company Information */}
         <div className="mt-8 pt-6 border-t border-gray-700">
           <div className="text-center space-y-3">
-            <p className="text-gray-300 text-sm font-league-spartan">
+            <p className="text-gray-300 text-sm font-sans">
               © 2025 NexStar Consulting DMCC. All rights reserved.
             </p>
-            <p className="text-gray-400 text-xs font-league-spartan leading-relaxed max-w-4xl mx-auto">
+            <p className="text-gray-400 text-xs font-sans leading-relaxed max-w-4xl mx-auto">
               NEXSTAR CONSULTING DMCC · Trade License No. DMCC-953429 · Legal status: Free Zone Company (DMCC) · Registration No. DMCC200756.
             </p>
-            <p className="text-gray-400 text-xs font-league-spartan leading-relaxed max-w-4xl mx-auto">
+            <p className="text-gray-400 text-xs font-sans leading-relaxed max-w-4xl mx-auto">
               Unit 3O-01-5668, Jewellery & Gemplex 3, Plot DMCC-PH2-J&GPlexS, Jewellery & Gemplex, Dubai, United Arab Emirates.
             </p>
           </div>
