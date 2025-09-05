@@ -1,4 +1,3 @@
-
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
@@ -117,22 +116,22 @@ export default function GetInTouch() {
       </div>
 
       {/* Form Section */}
-      <div className="w-full md:w-3/5 lg:w-[55%] flex flex-col justify-center px-6 md:px-12 lg:px-16 py-12 bg-[#f6f8ff]">
-        <h2 className="font-[Sora] font-semibold text-[40px] md:text-[48px] text-center text-black mb-8">
+      <div className="w-full md:w-3/5 lg:w-[55%] flex flex-col justify-center px-6 md:px-12 lg:px-16 py-12 bg-[#f6f8ff] max-w-7xl mx-auto">
+        <h2 className="font-[serif] font-semibold text-[40px] md:text-[48px] 3xl:text-[clamp(2.25rem,2vw+1.5rem,3rem)] text-center text-black mb-8">
           Get In Touch
         </h2>
 
         {/* Success State */}
         {submitted ? (
           <div className="text-center">
-            <p className="text-lg font-semibold text-black font-[League_Spartan]">
+            <p className="text-lg font-semibold text-black font-sans">
               Thank you! We'll get back to you within 24 hours.
             </p>
             <a
               href="https://nexstar.zohobookings.com/#/4585749000000036002?utm_source=website&utm_medium=embed&utm_campaign=discovery_call"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg mt-6 inline-block bg-[#545CF6] text-white px-8 py-3 rounded-full shadow font-[League_Spartan] transition"
+              className="text-lg mt-6 inline-block bg-[#545CF6] text-white px-8 py-3 rounded-full shadow font-sans transition"
             >
               Book a Discovery Call
             </a>
@@ -141,12 +140,12 @@ export default function GetInTouch() {
           <>
             {/* Tabs */}
             <div className="mb-10 w-full">
-              <div className="relative flex flex-row rounded-full border border-gray-200 bg-white p-1">
+              <div className="relative flex flex-row rounded-full border border-gray-200 bg-white p-1 ">
                 {tabs.map((tab, idx) => (
                   <button
                     key={tab.label}
                     onClick={() => setActiveTab(idx)}
-                    className={`flex-1 rounded-full py-2.5 px-4 text-center font-[League_Spartan] font-semibold text-base transition-all duration-300 ${
+                    className={`flex-1 rounded-full py-2.5 px-4 lg:py-4 text-center font-sans font-semibold text-sm md:text-base transition-all duration-300 ${
                       activeTab === idx
                         ? "bg-black text-white"
                         : "text-gray-600 hover:bg-gray-100"
@@ -161,7 +160,7 @@ export default function GetInTouch() {
             {/* Form */}
             <form
               onSubmit={handleSubmit}
-              className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6"
+              className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-7 md:gap-y-15 lg:gap-y-20 "
             >
               <input
                 type="text"
@@ -170,7 +169,9 @@ export default function GetInTouch() {
                 onChange={(e) =>
                   setForm({ ...form, firstName: e.target.value })
                 }
-                className={`w-full bg-transparent border-b border-gray-300 focus:border-[#3B4FFF] outline-none py-2 font-[League_Spartan] text-[18px] placeholder:text-[#808080] ${form.firstName ? 'text-black' : 'text-[#808080]'}`}
+                className={`w-full bg-transparent border-b border-gray-300 focus:border-[#3B4FFF] outline-none py-2 font-sans text-[18px] placeholder:text-[#808080] ${
+                  form.firstName ? "text-black" : "text-[#808080]"
+                }`}
                 required
               />
               <input
@@ -178,24 +179,33 @@ export default function GetInTouch() {
                 placeholder="Last Name"
                 value={form.lastName}
                 onChange={(e) => setForm({ ...form, lastName: e.target.value })}
-                className={`w-full bg-transparent border-b border-gray-300 focus:border-[#3B4FFF] outline-none py-2 font-[18px] placeholder:text-[#808080] ${form.lastName ? 'text-black' : 'text-[#808080]'}`}
+                className={`w-full bg-transparent border-b border-gray-300 focus:border-[#3B4FFF] outline-none py-2 font-[18px] placeholder:text-[#808080] ${
+                  form.lastName ? "text-black" : "text-[#808080]"
+                }`}
               />
               <input
                 type="email"
                 placeholder="Email ID"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className={`w-full bg-transparent border-b border-gray-300 focus:border-[#3B4FFF] outline-none py-2 font-[18px] placeholder:text-[#808080] ${form.email ? 'text-black' : 'text-[#808080]'}`}
+                className={`w-full bg-transparent border-b border-gray-300 focus:border-[#3B4FFF] outline-none py-2 font-[18px] placeholder:text-[#808080] ${
+                  form.email ? "text-black" : "text-[#808080]"
+                }`}
                 required
               />
               {/* Phone with Country */}
-              <div ref={countryDropdownRef} className="flex items-center border-b border-gray-300 relative">
+              <div
+                ref={countryDropdownRef}
+                className="flex items-center border-b border-gray-300 relative"
+              >
                 <button
                   type="button"
                   className="flex items-center mr-2 px-2 py-1 rounded"
                   onClick={() => setShowCountryDropdown((v) => !v)}
                 >
-                  <span className="text-xl" style={{ color: '#808080' }}>{flag}</span>
+                  <span className="text-xl" style={{ color: "#808080" }}>
+                    {flag}
+                  </span>
                   <span className="ml-1 text-gray-500 text-base">
                     {selectedCountry.dialCode}
                   </span>
@@ -237,9 +247,13 @@ export default function GetInTouch() {
                               setCountrySearch("");
                             }}
                           >
-                            <span className="mr-2">{emojiFlags.countryCode(c.code).emoji}</span>
+                            <span className="mr-2">
+                              {emojiFlags.countryCode(c.code).emoji}
+                            </span>
                             <span className="mr-2 text-gray-500">{c.name}</span>
-                            <span className="mr-2 text-gray-500">({c.code})</span>
+                            <span className="mr-2 text-gray-500">
+                              ({c.code})
+                            </span>
                             <span className="text-gray-500">{c.dialCode}</span>
                           </li>
                         ))
@@ -257,22 +271,73 @@ export default function GetInTouch() {
                   value={formatPhoneNumber(form.phone, selectedCountry.code)}
                   maxLength={(() => {
                     // Add more countries as needed
-                    const countryPhoneLengths = { IN: 10, US: 10, UK: 10, AE: 9, AU: 9, CA: 10, DE: 11, FR: 9, IT: 10, JP: 10, RU: 10, SA: 9, SG: 8, ZA: 9, MX: 10 };
+                    const countryPhoneLengths = {
+                      IN: 10,
+                      US: 10,
+                      UK: 10,
+                      AE: 9,
+                      AU: 9,
+                      CA: 10,
+                      DE: 11,
+                      FR: 9,
+                      IT: 10,
+                      JP: 10,
+                      RU: 10,
+                      SA: 9,
+                      SG: 8,
+                      ZA: 9,
+                      MX: 10,
+                    };
                     return countryPhoneLengths[selectedCountry.code] || 15;
                   })()}
                   pattern={`\\d{${(() => {
-                    const countryPhoneLengths = { IN: 10, US: 10, UK: 10, AE: 9, AU: 9, CA: 10, DE: 11, FR: 9, IT: 10, JP: 10, RU: 10, SA: 9, SG: 8, ZA: 9, MX: 10 };
+                    const countryPhoneLengths = {
+                      IN: 10,
+                      US: 10,
+                      UK: 10,
+                      AE: 9,
+                      AU: 9,
+                      CA: 10,
+                      DE: 11,
+                      FR: 9,
+                      IT: 10,
+                      JP: 10,
+                      RU: 10,
+                      SA: 9,
+                      SG: 8,
+                      ZA: 9,
+                      MX: 10,
+                    };
                     return countryPhoneLengths[selectedCountry.code] || 15;
                   })()}}`}
                   onChange={(e) => {
                     // Only allow digits and limit length
-                    const countryPhoneLengths = { IN: 10, US: 10, UK: 10, AE: 9, AU: 9, CA: 10, DE: 11, FR: 9, IT: 10, JP: 10, RU: 10, SA: 9, SG: 8, ZA: 9, MX: 10 };
-                    const maxLen = countryPhoneLengths[selectedCountry.code] || 15;
+                    const countryPhoneLengths = {
+                      IN: 10,
+                      US: 10,
+                      UK: 10,
+                      AE: 9,
+                      AU: 9,
+                      CA: 10,
+                      DE: 11,
+                      FR: 9,
+                      IT: 10,
+                      JP: 10,
+                      RU: 10,
+                      SA: 9,
+                      SG: 8,
+                      ZA: 9,
+                      MX: 10,
+                    };
+                    const maxLen =
+                      countryPhoneLengths[selectedCountry.code] || 15;
                     let val = e.target.value.replace(/[^0-9]/g, "");
                     if (val.length > maxLen) val = val.slice(0, maxLen);
                     setForm({ ...form, phone: val });
                   }}
-                  className={`flex-1 bg-transparent outline-none py-2 font-[League_Spartan] text-[18px] placeholder:text-[#808080] ${form.phone ? 'text-black' : 'text-[#808080]'}`}
+                  className={`flex-1 bg-transparent outline-none py-2 font-sans text-[18px] placeholder:text-[#808080] ${
+                    form.phone ? "text-black" : "text-[#808080]"
+                  }`}
                 />
               </div>
 
@@ -281,19 +346,23 @@ export default function GetInTouch() {
                 placeholder="Company Name"
                 value={form.company}
                 onChange={(e) => setForm({ ...form, company: e.target.value })}
-                className={`w-full bg-transparent border-b border-gray-300 focus:border-[#3B4FFF] outline-none py-2 font-[League_Spartan] text-[18px] placeholder:text-[#808080] ${form.company ? 'text-black' : 'text-[#808080]'}`}
+                className={`w-full bg-transparent border-b border-gray-300 focus:border-[#3B4FFF] outline-none py-2 font-sans text-[18px] placeholder:text-[#808080] ${
+                  form.company ? "text-black" : "text-[#808080]"
+                }`}
               />
 
               {/* Dropdown */}
               <div ref={solutionDropdownRef} className="relative">
                 <button
                   type="button"
-                  className={`w-full flex items-center justify-between bg-transparent border-b border-gray-300 focus:border-[#3B4FFF] outline-none py-2 font-[League_Spartan] font-normal text-[18px] leading-[27.04px] tracking-[0%] text-left transition-colors duration-200 ${
+                  className={`w-full flex items-center justify-between bg-transparent border-b border-gray-300 focus:border-[#3B4FFF] outline-none py-2 font-sans font-normal text-[18px] leading-[27.04px] tracking-[0%] text-left transition-colors duration-200 ${
                     form.solution ? "text-black" : "text-gray-500"
                   }`}
                   onClick={() => setShowDropdown((v) => !v)}
                 >
-                  <span className={form.solution ? "text-black" : "text-gray-500"}>
+                  <span
+                    className={form.solution ? "text-black" : "text-gray-500"}
+                  >
                     {form.solution || "Solution of Interest"}
                   </span>
                   <svg
@@ -328,23 +397,27 @@ export default function GetInTouch() {
 
               {/* Submit */}
               <div className="md:col-span-2 flex md:justify-start justify-center mt-6">
-                <div className="flex flex-col lg:flex-row lg:items-center w-full lg:w-auto gap-2 lg:gap-6">
+                <div className="flex flex-col lg:flex-col lg:items-center w-full lg:w-auto gap-2 lg:gap-6">
                   <button
                     type="submit"
-                    className="bg-[#545CF6] hover:bg-[#4F46E5] text-white font-semibold text-lg px-16 py-3 rounded-full transition duration-200 shadow-lg shadow-[#5B6FFF]/20 hover:shadow-xl hover:shadow-[#5B6FFF]/30 focus:outline-none focus:ring-2 focus:ring-[#545CF6] focus:ring-offset-2 focus:ring-offset-white w-full lg:w-auto"
+                    className="bg-[#545CF6] font-sans hover:bg-[#4F46E5] text-white font-semibold text-[clamp(0.875rem,2vw+0.5rem,1.25rem)] px-16 py-3 rounded-full transition duration-200 shadow-lg shadow-[#5B6FFF]/20 hover:shadow-xl hover:shadow-[#5B6FFF]/30 focus:outline-none focus:ring-2 focus:ring-[#545CF6] focus:ring-offset-2 focus:ring-offset-white w-full lg:w-auto"
                   >
                     Submit
                   </button>
-                  {/* Microcopy + Privacy Policy */}
-                  <span className="flex flex-row items-center justify-center text-base text-gray-600 font-['League_Spartan'] mt-4 lg:mt-0">
-                    Response in &lt;24h ·{' '}
-                    <a href="/privacy-policy" className="underline ml-1" style={{ color: '#545CF6' }}>
-                      Privacy Policy
-                    </a>
-                  </span>
                 </div>
               </div>
             </form>
+            {/* Microcopy + Privacy Policy */}
+            <p className="pt-5 md:pt-15 lg:pt-30 flex flex-row items-center justify-center text-base text-gray-600 font-sans mt-4 lg:mt-0">
+              Response in &lt;24h ·{" "}
+              <a
+                href="/privacy-policy"
+                className="underline ml-1"
+                style={{ color: "#545CF6" }}
+              >
+                Privacy Policy
+              </a>
+            </p>
           </>
         )}
       </div>
