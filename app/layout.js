@@ -1,4 +1,13 @@
-import { Geist, Geist_Mono, League_Spartan, Sora } from "next/font/google";
+import { Geist, Geist_Mono, League_Spartan, Sora, Inter, Source_Serif_4 } from "next/font/google";
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-source-serif",
+});
 import "./globals.css";
 import StructuredData from "./components/StructuredData";
 import Header from "./components/Header";
@@ -78,7 +87,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}> 
       <head>
         <link rel="canonical" href="https://nexstar-consulting.com" />
         <link rel="manifest" href="/manifest.json" />
@@ -100,7 +109,7 @@ export default function RootLayout({ children }) {
         <StructuredData />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${leagueSpartan.variable} ${sora.variable} antialiased`}
+  className={`${geistSans.variable} ${geistMono.variable} ${leagueSpartan.variable} ${sora.variable} antialiased font-sans`}
       >
         <Header />
         {children}
