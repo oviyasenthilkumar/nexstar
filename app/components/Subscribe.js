@@ -87,14 +87,14 @@ const Subscribe = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h2 
-          id="subscribe-heading"
-          className="font-sora font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-[100%] tracking-normal capitalize text-white mb-6"
-        >
-          Subscribe To Our Newsletter
-        </h2>
+        <h1
+              id="achievements-heading"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl max-w-7xl mx-auto 3xl:text-[clamp(2.25rem,2vw+1.5rem,3rem)] font-semibold mb-4 sm:mb-6 font-serif bg-gradient-to-r from-white via-gray-400 to-white bg-clip-text text-transparent"
+            >
+              Subscribe to Our Newsletter
+            </h1>
 
-        <p className="font-league-spartan font-normal text-base sm:text-lg md:text-xl lg:text-[18px] leading-[100%] tracking-normal text-gray-300 mb-12 max-w-2xl mx-auto">
+        <p className="font-sans font-normal text-base sm:text-lg md:text-xl lg:text-[18px]  3xl:text-[clamp(1rem,0.5vw+0.875rem,1.125rem)] leading-[100%] tracking-normal text-gray-300 mb-12 max-w-2xl mx-auto">
           Stay in the loop and keep up with all our news and updates!
         </p>
 
@@ -116,7 +116,7 @@ const Subscribe = () => {
                 required
                 aria-required="true"
                 aria-describedby="email-help"
-                className="w-full px-5 py-3 sm:px-6 sm:py-4 bg-transparent text-white placeholder-white/70 outline-none text-lg sm:text-lg font-league-spartan rounded-xl sm:rounded-full border-none mb-2 sm:mb-0"
+                className="w-full px-5 py-3 sm:px-6 sm:py-4 bg-transparent text-white placeholder-white/70 outline-none text-lg sm:text-lg font-sans rounded-xl sm:rounded-full border-none mb-2 sm:mb-0"
               />
               <div id="email-help" className="sr-only">
                 Enter your email address to subscribe to our newsletter
@@ -127,7 +127,7 @@ const Subscribe = () => {
               type="submit"
               disabled={isSubscribed}
               aria-label={isSubscribed ? "Successfully subscribed" : "Subscribe to newsletter"}
-              className="w-full sm:w-auto rounded-xl sm:rounded-full bg-[#545CF6] text-white font-league-spartan font-semibold text-lg sm:text-xl px-8 sm:px-12 py-3 sm:py-4 shadow-[0_0_24px_0_rgba(108,92,231,0.4)] transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-2 focus:ring-offset-black hover:scale-105 whitespace-nowrap relative overflow-hidden flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full sm:w-auto rounded-xl sm:rounded-full bg-[#545CF6] text-white font-sans font-semibold text-lg sm:text-xl px-8 sm:px-12 py-3 sm:py-4 shadow-[0_0_24px_0_rgba(108,92,231,0.4)] transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-2 focus:ring-offset-black hover:scale-105 whitespace-nowrap relative overflow-hidden flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
             >
               <span className="relative z-10">
                 {isSubscribed ? "Subscribed!" : "Subscribe"}
@@ -141,7 +141,7 @@ const Subscribe = () => {
         {/* Success Message */}
         {isSubscribed && (
           <div 
-            className="mt-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-300"
+            className="mt-6 p-4 font-sans bg-green-500/20 border border-green-500/30 rounded-lg text-green-300"
             role="alert"
             aria-live="polite"
             aria-label="Subscription successful"
