@@ -50,7 +50,7 @@ export default function Home() {
 
           {/* Hero Section: Now occupies the full 12 columns of our grid. */}
           <section
-            className="col-span-12 pt-2 sm:pt-6 md:pt-18 lg:pt-30 2xl:pt-28 3xl:pt-60 text-center"
+            className="col-span-12 pt-15 sm:pt-6 md:pt-18 lg:pt-30 2xl:pt-28 3xl:pt-60 text-center"
             aria-labelledby="hero-heading"
           >
             {/* We can nest grids for finer control. Here we center the text content. */}
@@ -88,7 +88,7 @@ export default function Home() {
           </section>
 
           {/* Team Image: Also spans the full 12 columns. */}
-          <div className="col-span-12 z-20 flex justify-center mt-20 sm:mt-12 md:mt-35 lg:mt-20  2xl:-mt-1 3xl:mt-30 min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] -translate-y-8 sm:-translate-y-2 md:translate-y-0 sm:pb-8 md:pb-12 lg:pb-16">
+          <div className="col-span-12 z-20 flex justify-center mt-10 sm:mt-12 md:mt-35 lg:mt-20  2xl:-mt-1 3xl:mt-30 min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] -translate-y-8 sm:-translate-y-2 md:translate-y-0 sm:pb-8 md:pb-12 lg:pb-16">
 
             <picture>
               <source srcSet="/images/groupimage.webp" type="image/webp" />
