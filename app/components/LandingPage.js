@@ -88,7 +88,7 @@ export default function Home() {
           </section>
 
           {/* Team Image: Also spans the full 12 columns. */}
-          <div className="col-span-12 z-20 flex justify-center mt-10 sm:mt-12 md:mt-35 lg:mt-20  2xl:-mt-1 3xl:mt-30 min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] -translate-y-8 sm:-translate-y-2 md:translate-y-0 sm:pb-8 md:pb-12 lg:pb-16">
+          <div className="col-span-12 z-20 flex justify-center mt-20 sm:mt-12 md:mt-35 lg:mt-20  2xl:-mt-1 3xl:mt-30 min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] -translate-y-8 sm:-translate-y-2 md:translate-y-0 sm:pb-8 md:pb-12 lg:pb-16">
 
             <picture>
               <source srcSet="/images/groupimage.webp" type="image/webp" />
