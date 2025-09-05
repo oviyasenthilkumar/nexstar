@@ -14,7 +14,8 @@ module.exports = {
         foreground: 'var(--foreground)',
       },
       fontFamily: {
-        sans: ['var(--font-league-spartan)', 'sans-serif' ] ,
+        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        serif: ['var(--font-source-serif)', 'Source Serif Pro', 'serif'],
         mono: ['var(--font-geist-mono)', 'monospace'],
         sora: ['var(--font-sora)', 'sans-serif'],
         spartan: ['var(--font-league-spartan)', 'sans-serif'],
