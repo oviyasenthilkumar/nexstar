@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+html, body {
+  overflow-x: hidden;
+}
 
 :root {
   --background: #ffffff;
@@ -14,6 +17,11 @@
   --font-league-spartan: var(--font-league-spartan);
   --font-sora: var(--font-sora);
 }
+
+@theme {
+  --breakpoint-3xl: 130rem;
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
