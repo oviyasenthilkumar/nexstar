@@ -75,7 +75,7 @@ export default function Header() {
         <div className="flex-shrink-0">
           <a href="#home" aria-label="Go to homepage">
             <picture>
-              <source srcSet="/logo.webp" type="image/webp" />
+              <source srcSet="/Logo.webp" type="image/webp" />
               <Image
                 src="/Logo.png"
                 alt="NexStar Consulting Logo - Click to go to homepage"
@@ -112,35 +112,35 @@ export default function Header() {
         >
           <a 
             href="#about" 
-            className="text-base text-white font-regular font-league-spartan  transition-colors "
+            className="text-base text-white font-regular font-sans  transition-colors "
             aria-label="Go to About Us section"
           >
             About Us
           </a>
           <a 
             href="#services" 
-            className="text-base text-white font-regular font-league-spartan  transition-colors "
+            className="text-base text-white font-regular font-sans  transition-colors "
             aria-label="Go to Services section"
           >
             Services
           </a>
           <a 
             href="/ebook/book.pdf" 
-            className="text-base text-white font-regular font-league-spartan  transition-colors "
+            className="text-base text-white font-regular font-sans  transition-colors "
             aria-label="Go to BOSZ methodology section"
           >
             Book
           </a>
-          <a 
+          {/* <a 
             href="#services" 
             className="text-base text-white font-regular font-league-spartan  transition-colors "
             aria-label="Go to GoZen platform section"
           >
             GoZen
-          </a>
+          </a> */}
           <a 
             href="#blogs" 
-            className="text-base text-white font-regular font-league-spartan  transition-colors "
+            className="text-base text-white font-regular font-sans  transition-colors "
             aria-label="Go to Blogs and insights section"
           >
             Blogs
@@ -160,7 +160,7 @@ export default function Header() {
         </a> */}
         <a
           href="#contact"
-          className="hidden md:inline-block relative flex items-center gap-2 px-8 py-2 border border-[#B6AFFF] rounded-full bg-transparent hover:bg-white/10 transition duration-150 shadow-[0_0_16px_0_rgba(182,175,255,0.12)] font-league-spartan font-semibold text-base text-white focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(182,175,255,0.7),0_0_0_1px_rgba(182,175,255,0.3)]"
+          className="hidden md:inline-block relative flex items-center gap-2 px-8 py-2 border border-[#B6AFFF] rounded-full bg-transparent hover:bg-white/10 transition duration-150 shadow-[0_0_16px_0_rgba(182,175,255,0.12)] font-sans font-semibold text-base text-white focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(182,175,255,0.7),0_0_0_1px_rgba(182,175,255,0.3)]"
           style={{ boxShadow: '0 0 16px 0 rgba(182,175,255,0.12), 0 2px 12px 0 rgba(255,255,255,0.08) inset' }}
           aria-label="Contact us - opens contact section"
         >
@@ -188,7 +188,7 @@ export default function Header() {
             aria-modal="true"
             aria-label="Mobile navigation menu"
           >
-            <div className="relative w-full max-w-none h-full bg-white/30 backdrop-blur-md shadow-2xl flex flex-col items-center pt-8 pb-6 overflow-hidden font-league-spartan" style={{boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.25)'}}>
+            <div className="relative w-full max-w-none h-full bg-white/30 backdrop-blur-md shadow-2xl flex flex-col items-center pt-8 pb-6 overflow-hidden font-sans" style={{boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.25)'}}>
               {/* Animated gradient overlay */}
               <div className="pointer-events-none absolute inset-0" style={{zIndex:1}} aria-hidden="true">
                 <div className="w-full h-full animate-gradientMove bg-gradient-to-br from-[#e0c3fc]/40 via-[#8ec5fc]/40 to-[#f093fb]/40 opacity-70" />
@@ -207,7 +207,7 @@ export default function Header() {
               <div className="w-full flex justify-center z-10 relative mt-2 mb-8">
                 <a href="#home" aria-label="Go to homepage">
                   <picture>
-                    <source srcSet="/logo.webp" type="image/webp" />
+                    <source srcSet="/Logo.webp" type="image/webp" />
                     <Image
                       src="/Logo.png"
                       alt="NexStar Consulting Logo - Click to go to homepage"
@@ -246,14 +246,14 @@ export default function Header() {
                 >
                   Book
                 </a>
-                <a 
+                {/* <a 
                   href="#services" 
                   className="py-2 text-2xl md:text-3xl transition-all duration-200 hover:text-[#5B6FFF] border-b border-white/10 rounded px-2" 
                   onClick={handleNavClick}
                   aria-label="Go to Services section"
                 >
                   Gozen
-                </a>
+                </a> */}
                 <a 
                   href="#blogs" 
                   className="py-2 text-2xl md:text-3xl transition-all duration-200 hover:text-[#5B6FFF] mt-0 border-b border-white/10  rounded px-2" 
