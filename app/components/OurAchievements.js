@@ -1,5 +1,3 @@
-
-
 'use client'
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -44,12 +42,12 @@ export default function OurAchievements() {
           <div className="text-center pt-12 sm:pt-16 md:pt-20 px-4">
             <h1
               id="achievements-heading"
-              className="text-3xl  max-w-7xl mx-auto sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl font-semibold mb-4 sm:mb-6 font-sora bg-gradient-to-r from-white via-gray-400 to-white bg-clip-text text-transparent"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl max-w-7xl mx-auto 3xl:text-[clamp(2.25rem,2vw+1.5rem,3rem)] font-semibold mb-4 sm:mb-6 font-serif bg-gradient-to-r from-white via-gray-400 to-white bg-clip-text text-transparent"
             >
               Our Achievements
             </h1>
             <p
-              className="text-sm max-w-3xl mx-auto sm:text-base md:text-xl lg:text-xl xl:text-lg 2xl:text-xl text-gray-300 max-w-2xl mx-auto font-normal font-league-spartan"
+              className="text-sm max-w-prose mx-auto 3xl:text-[clamp(1rem,0.5vw+0.875rem,1.125rem)] text-gray-300 max-w-2xl mx-auto font-normal font-sans"
             >
               We take pride in transforming businesses through impactful
               <br className="hidden sm:block" /> solutions and measurable results.
@@ -64,7 +62,7 @@ export default function OurAchievements() {
               rel="noopener noreferrer"
               role="button"
               aria-label="Explore insights"
-              className="inline-block relative flex items-center gap-2 px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 border border-[#B6AFFF] rounded-full bg-transparent hover:bg-white/10 transition duration-150 shadow-[0_0_16px_0_rgba(182,175,255,0.12)] font-league-spartan font-semibold text-sm sm:text-base md:text-xl text-white focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(182,175,255,0.7),0_0_0_1px_rgba(182,175,255,0.3)] -mt-4"
+              className="inline-block relative flex items-center gap-2 px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 border border-[#B6AFFF] rounded-full bg-transparent hover:bg-white/10 transition duration-150 shadow-[0_0_16px_0_rgba(182,175,255,0.12)] font-sans font-semibold text-[clamp(0.875rem,2vw+0.5rem,1.25rem)] text-white focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(182,175,255,0.7),0_0_0_1px_rgba(182,175,255,0.3)] -mt-4"
               style={{ boxShadow: '0 0 16px 0 rgba(182,175,255,0.12), 0 2px 12px 0 rgba(255,255,255,0.08) inset' }}
             >
               Explore Insights - LinkedIn
@@ -76,9 +74,9 @@ export default function OurAchievements() {
               rel="noopener noreferrer"
               role="button"
               aria-label="Schedule your consultation to transform your business"
-              className="inline-block bg-[#545CF6] hover:bg-[#4F46E5] px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 text-white font-semibold text-sm sm:text-base md:text-xl font-league-spartan rounded-full transition duration-200 shadow-lg shadow-[#5B6FFF]/20 hover:shadow-xl hover:shadow-[#5B6FFF]/30 relative hidden md:inline-block focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(255,255,255,0.7),0_0_0_1px_rgba(84,92,246,0.3)] -mt-4"
+              className="inline-block bg-[#545CF6] hover:bg-[#4F46E5] px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 text-white font-semibold text-[clamp(0.875rem,2vw+0.5rem,1.25rem)] font-sans rounded-full transition duration-200 shadow-lg shadow-[#5B6FFF]/20 hover:shadow-xl hover:shadow-[#5B6FFF]/30 relative hidden md:inline-block focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(255,255,255,0.7),0_0_0_1px_rgba(84,92,246,0.3)] -mt-4"
             >
-              Schedule a Discovery Call
+              Book a Discovery Call
               {/* Bright white light effect at bottom edge - intense center, gradient blur to corners */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[377px] h-1.5 sm:h-2 md:h-2.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-100 blur-md shadow-[0_0_12px_rgba(255,255,255,0.8)]" aria-hidden="true"></div>
             </a>
@@ -117,12 +115,12 @@ export default function OurAchievements() {
                 {/* Clients Served */}
                 <div className="flex flex-col items-center">
                   <div
-                    className="text-transparent bg-clip-text font-sora font-bold text-[clamp(18px,3.5vw,60px)] leading-[100%] tracking-[0%] bg-gradient-to-r from-[#CCC0FC] via-[#5257C6] to-[#8C83F6] whitespace-nowrap"
+                    className="text-transparent bg-clip-text font-sans font-bold text-[clamp(18px,3.5vw,60px)] leading-[100%] tracking-[0%] bg-gradient-to-r from-[#CCC0FC] via-[#5257C6] to-[#8C83F6] whitespace-nowrap"
                   >
                     1,300+
                   </div>
                   <div
-                    className="text-white text-center max-w-md mt-2 font-league-spartan font-normal text-[clamp(12px,2.5vw,20px)] leading-[26.53px] tracking-[0%]"
+                    className="text-white text-center max-w-md mt-2 font-sans font-normal text-[clamp(12px,2.5vw,20px)] leading-[26.53px] tracking-[0%]"
                   >
                     clients served (founders at MDO — Zoho's largest Premium Partner)
                   </div>
@@ -138,12 +136,12 @@ export default function OurAchievements() {
                 {/* Zoho License Sales */}
                 <div className="flex flex-col items-center">
                   <div
-                    className="text-transparent bg-clip-text font-sora font-bold text-[clamp(18px,3.5vw,60px)] leading-[100%] tracking-[0%] bg-gradient-to-r from-[#CCC0FC] via-[#5257C6] to-[#8C83F6] whitespace-nowrap"
+                    className="text-transparent bg-clip-text font-sans font-bold text-[clamp(18px,3.5vw,60px)] leading-[100%] tracking-[0%] bg-gradient-to-r from-[#CCC0FC] via-[#5257C6] to-[#8C83F6] whitespace-nowrap"
                   >
                     $2,453,795
                   </div>
                   <div
-                    className="text-white text-center max-w-md mt-2 font-league-spartan font-normal text-[clamp(12px,2.5vw,20px)] leading-[26.53px] tracking-[0%]"
+                    className="text-white text-center max-w-md mt-2 font-sans font-normal text-[clamp(12px,2.5vw,20px)] leading-[26.53px] tracking-[0%]"
                   >
                     in Zoho license sales across 27 countries (2024)
                   </div>
@@ -159,12 +157,12 @@ export default function OurAchievements() {
                 {/* Top Markets */}
                 <div className="flex flex-col items-center">
                   <div
-                    className="text-transparent bg-clip-text font-sora font-bold text-[clamp(18px,3.5vw,60px)] leading-[100%] tracking-[0%] bg-gradient-to-r from-[#CCC0FC] via-[#5257C6] to-[#8C83F6] whitespace-nowrap"
+                    className="text-transparent bg-clip-text font-sans font-bold text-[clamp(18px,3.5vw,60px)] leading-[100%] tracking-[0%] bg-gradient-to-r from-[#CCC0FC] via-[#5257C6] to-[#8C83F6] whitespace-nowrap"
                   >
                     Top markets
                   </div>
                   <div
-                    className="text-white text-center max-w-md mt-2 font-league-spartan font-normal text-[clamp(12px,2.5vw,20px)] leading-[26.53px] tracking-[0%]"
+                    className="text-white text-center max-w-md mt-2 font-sans font-normal text-[clamp(12px,2.5vw,20px)] leading-[26.53px] tracking-[0%]"
                   >
                     US, UK, Australia, Canada, South Africa
                   </div>
@@ -176,27 +174,30 @@ export default function OurAchievements() {
         </div>
 
         {/* Nautilus Method Section */}
-        <div className="relative mb-2 md:mb-0 py-0 sm:py-12 md:py-0 pt-25 sm:pt-8 md:pt-0 ">
+        <div className="relative mb-2 md:mb-0 py-0 sm:py-12 md:py-0 pt-30 sm:pt-8 md:pt-0 ">
           <div className="text-center mb-4 sm:mb-12 ">
           <h2
-              className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-semibold mb-4 font-sora bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl 3xl:text-[clamp(2.25rem,2vw+1.5rem,3rem)]  font-semibold mb-4 font-serif bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent"
             >
               The Nautilus Method           </h2>
             <p
-              className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-semibold mb-4 font-sora bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl 3xl:text-[clamp(2.25rem,2vw+1.5rem,3rem)]  font-semibold mb-4 font-serif bg-gradient-to-r from-[#FFFFFF] via-[#9E9FA2] to-[#FFFFFF] bg-clip-text text-transparent"
             >
               Incremental sprints. Compounding value.
             </p>
-            <div className="px-5 md:px-0 text-center text-gray-400 md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed font-league-spartan">
-              <p className="font-normal text-sm sm:text-base md:text-xl lg:text-xl xl:text-lg 2xl:text-xl mb-6">
-                A practical framework to move from strategy to operation with low risk and measurable impact.
+            <div className="px-5 md:px-0 text-center text-gray-400 md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed font-sans">
+              <p className="font-normal text-sm sm:text-base md:text-xl lg:text-xl xl:text-lg 2xl:text-xl 3xl:text-[clamp(1rem,0.5vw+0.875rem,1.125rem)] mb-6">
+                 A practical framework to move 
+                strategy to operation with low risk and measurable impact.
               </p>
 
-              <ul className="max-w-3xl pl-7 text-left list-disc list-inside space-y-4 font-normal text-sm sm:text-base md:text-xl mx-auto mb-[150]">
+              <ul className="max-w-prose pl-7 text-left list-disc list-inside space-y-4 font-normal text-sm sm:text-base md:text-xl 3xl:text-[clamp(1rem,0.5vw+0.875rem,1.125rem)] font-sans mx-auto mb-[150]">
                 <li>
                   <span className="text-[#545CF6]">Diagnose</span> — Align purpose & value prop, map capabilities, set baseline KPIs, 90-day plan.
                 </li>
                 <li>
+
+                  
                   <span className="text-[#545CF6]">Pilot</span> — Digitize with Zoho, define SOPs, dashboard KPIs; exit only with proven lift.
                 </li>
                 <li>
@@ -209,14 +210,14 @@ export default function OurAchievements() {
             </div>
           </div>
 
-          <div className="absolute top-140 sm:top-40 md:top-130 lg:top-115 2xl:top-115 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row justify-center items-center gap-7 sm:gap-6 md:gap-8 px-4 z-20 w-full max-w-xs sm:max-w-none">
+          <div className="absolute top-144 sm:top-40 md:top-145 lg:top-115 2xl:top-114 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row justify-center items-center gap-7 sm:gap-6 md:gap-8 px-4 z-20 w-full max-w-xs sm:max-w-none">
             <a
               href="/ebook/book.pdf"
               target="_blank"
               rel="noopener noreferrer"
               role="button"
               aria-label="Explore insights"
-              className="inline-block relative flex items-center gap-2 px-8 sm:px-12 md:px-20 py-3 sm:py-4 md:py-5 border border-[#B6AFFF] rounded-full bg-transparent hover:bg-white/10 transition duration-150 shadow-[0_0_16px_0_rgba(182,175,255,0.12)] font-league-spartan font-semibold text-sm sm:text-base md:text-xl text-white focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(182,175,255,0.7),0_0_0_1px_rgba(182,175,255,0.3)] -mt-4"
+              className=" relative flex items-center gap-2 px-8 sm:px-12 md:px-20 py-3 sm:py-4 md:py-5 border border-[#B6AFFF] rounded-full bg-transparent hover:bg-white/10 transition duration-150 shadow-[0_0_16px_0_rgba(182,175,255,0.12)] font-sans font-semibold text-[clamp(0.875rem,2vw+0.5rem,1.25rem)] text-white focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(182,175,255,0.7),0_0_0_1px_rgba(182,175,255,0.3)] -mt-4"
               style={{ boxShadow: '0 0 16px 0 rgba(182,175,255,0.12), 0 2px 12px 0 rgba(255,255,255,0.08) inset' }}
             >
               See the Methods
@@ -228,9 +229,9 @@ export default function OurAchievements() {
               rel="noopener noreferrer"
               role="button"
               aria-label="Schedule your consultation to transform your business"
-              className="inline-block bg-[#545CF6] hover:bg-[#4F46E5] px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 text-white font-semibold text-sm sm:text-base md:text-xl font-league-spartan rounded-full transition duration-200 shadow-lg shadow-[#5B6FFF]/20 hover:shadow-xl hover:shadow-[#5B6FFF]/30 relative hidden md:inline-block focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(255,255,255,0.7),0_0_0_1px_rgba(84,92,246,0.3)] -mt-4"
+              className=" bg-[#545CF6] hover:bg-[#4F46E5] px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 text-white font-semibold text-sm sm:text-base md:text-xl font-league-spartan rounded-full transition duration-200 shadow-lg shadow-[#5B6FFF]/20 hover:shadow-xl hover:shadow-[#5B6FFF]/30 relative  focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-transparent focus:shadow-[0_0_0_0.5px_rgba(255,255,255,0.7),0_0_0_1px_rgba(84,92,246,0.3)] -mt-4"
             >
-              Schedule a Discovery Call
+              Book a Discovery Call
               {/* Bright white light effect at bottom edge - intense center, gradient blur to corners */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[377px] h-1.5 sm:h-2 md:h-2.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-100 blur-md shadow-[0_0_12px_rgba(255,255,255,0.8)]" aria-hidden="true"></div>
             </a>
@@ -250,15 +251,15 @@ export default function OurAchievements() {
             />
 
             {/* Strategic Value - Top Center with Arrow */}
-            <div className="absolute px-2 md:px-0 top-22 md:top-20 lg:top-24 2xl:top-25 sm:top-25 left-70 md:left-130 lg:left-170 2xl:left-220 -translate-x-1/2">
+            <div className="absolute px-2 md:px-0 top-22 md:top-20 lg:top-24 2xl:top-25 3xl:top-35 3xl:left-[45%] sm:top-25 left-70 md:left-130 lg:left-170 2xl:left-220 -translate-x-1/2">
               <div className="text-left md:max-w-64 max-w-40 -mr-9 md:mr-0 -ml-15 md:ml-0">
                 <h3
-                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-sora"
+                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-serif"
                 >
                   Strategic Value
                 </h3>
                 <p
-                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight font-league-spartan"
+                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight font-sans"
                 >
                   Innovation and market adaptability, fueled by knowledge
                   management and learning as the cornerstone of progress.
@@ -280,15 +281,15 @@ export default function OurAchievements() {
             </div>
 
             {/* Brand Value - Top Right with Arrow */}
-            <div className="absolute px-2 md:px-0 top-65 md:top-55 -right-20  md:-right-25 lg:right-5 2xl:right-110 -translate-x-1/2">
+            <div className="absolute px-2 md:px-0 top-65 md:top-55 -right-20  md:-right-25 lg:right-5 2xl:right-110 3xl:right-[32%] -translate-x-1/2">
               <div className="text-left md:max-w-56 max-w-35 md:mr-0 -ml-1 md:ml-0">
                 <h3
-                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-sora"
+                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-serif"
                   >
                   Brand Value
                 </h3>
                 <p
-                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight font-league-spartan"
+                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight font-sans"
                 >
                   Techniques to build recognition and loyalty, crafting a legacy
                   of trust within the ecosystem.
@@ -310,15 +311,15 @@ export default function OurAchievements() {
             </div>
 
             {/* Social Value - Bottom Right with Arrow */}
-            <div className="absolute px-2 md:px-0 bottom-8 sm:bottom-12 md:bottom-48 lg:bottom-55 2xl:bottom-52 -right-14 sm:right-8 md:right-5 lg:right-29 2xl:right-128">
+            <div className="absolute px-2 md:px-0 bottom-8 sm:bottom-12 md:bottom-48 lg:bottom-55 2xl:bottom-52 -right-14 sm:right-8 md:right-5 lg:right-29 2xl:right-128 3xl:right-[33%]">
               <div className="text-left max-w-56">
                 <h3
-                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-sora"
+                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-serif"
                   >
                   Social Value
                 </h3>
                 <p
-                  className="text-xs sm:text-sm text-gray-300 leading-tight font-league-spartan"
+                  className="text-xs sm:text-sm text-gray-300 leading-tight font-sans"
                 >
                   Impact that uplifts society and the environment, embodying
                   ethical responsibility into every action.
@@ -340,15 +341,15 @@ export default function OurAchievements() {
             </div>
 
             {/* Economic Value - Bottom Left with Arrow */}
-            <div className="absolute px-2 md:px-0 bottom-5 sm:bottom-12 md:bottom-35 lg:bottom-45 2xl:bottom-45 left-2 sm:left-8 md:left-15 lg:left-35 2xl:left-90">
+            <div className="absolute px-2 md:px-0 bottom-5 sm:bottom-12 md:bottom-35 lg:bottom-45 2xl:bottom-45 3xl:left-[23%] left-2 sm:left-8 md:left-15 lg:left-35 2xl:left-90">
               <div className="text-left md:max-w-56 max-w-40">
                 <h3
-                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-sora"
+                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-serif"
                   >
                   Economic Value
                 </h3>
                 <p
-                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight font-league-spartan"
+                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight font-sans"
                 >
                   Strategies that generate measurable financial gains,
                   optimizing resources for sustainable prosperity.
@@ -370,15 +371,15 @@ export default function OurAchievements() {
             </div>
 
             {/* Emotional Value - Left with Arrow */}
-            <div className="absolute px-2 md:px-0 top-35 md:top-80 lg:top-80  2xl:top-85 -translate-y-1/2 left-4 sm:left-8 md:left-14 lg:left-50 2xl:left-100">
+            <div className="absolute px-2 md:px-0 top-35 md:top-80 lg:top-80  2xl:top-85 3xl:left-[25%] 3xl:top-90 -translate-y-1/2 left-4 sm:left-8 md:left-14 lg:left-50 2xl:left-100">
               <div className="text-left md:max-w-56 max-w-40">
                 <h3
-                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-sora"
+                  className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl font-semibold mb-2 text-white font-serif"
                   >
                   Emotional Value
                 </h3>
                 <p
-                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight font-league-spartan"o
+                  className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight font-sans"o
                 >
                   Memorable experiences that resonate with clients, forging
                   connections beyond transactions.
@@ -405,49 +406,49 @@ export default function OurAchievements() {
         <div className="bg-[linear-gradient(90deg,#545CF6_0%,#5257C6_50%,_#545CF6_100%)] py-4 overflow-hidden" aria-hidden="true">
           <div className="flex whitespace-nowrap animate-scroll">
             <span
-              className="text-lg sm:text-xl font-semibold px-8 font-sora"
+              className="text-lg sm:text-xl font-semibold px-8 font-serif"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8 font-sora"
+              className="text-lg sm:text-xl font-semibold px-8 font-serif"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8 font-sora"
+              className="text-lg sm:text-xl font-semibold px-8 font-serif"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8 font-sora"
+              className="text-lg sm:text-xl font-semibold px-8 font-serif"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8 font-sora"
+              className="text-lg sm:text-xl font-semibold px-8 font-serif"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8 font-sora"
+              className="text-lg sm:text-xl font-semibold px-8 font-serif"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8 font-sora"
+              className="text-lg sm:text-xl font-semibold px-8 font-serif"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
             </span>
             <span
-              className="text-lg sm:text-xl font-semibold px-8 font-sora"
+              className="text-lg sm:text-xl font-semibold px-8 font-serif"
             >
               Innovation, Driving Growth, Earning Trust • Delivering Innovation,
               Driving Growth, Earning Trust •
