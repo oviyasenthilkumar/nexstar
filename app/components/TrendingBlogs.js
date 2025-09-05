@@ -98,11 +98,11 @@ export default function TrendingBlogs() {
     >
       <h2
         id="trending-blogs-heading"
-        className="text-black font-sora text-3xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl font-semibold text-center mb-4 w-full sm:w-[372px] mx-auto leading-[35px] md:leading-[44px] whitespace-normal md:whitespace-nowrap"
+        className="text-black font-serif text-3xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl 3xl:text-[clamp(2.25rem,2vw+1.5rem,3rem)] font-semibold text-center mb-4 w-full sm:w-[372px] mx-auto leading-[35px] md:leading-[44px] whitespace-normal md:whitespace-nowrap"
       >
         Trending Blogs
       </h2>
-      <p className="text-center px-8 md:px-0text-sm md:text-xl lg:text-xl xl:text-lg 2xl:text-xl px-2 md:px-0 font-league-spartan text-[#6C6C6C] max-w-xl mb-12">
+      <p className="text-center px-8 md:px-0 text-sm md:text-xl lg:text-xl xl:text-lg 2xl:text-xl 3xl:text-[clamp(1rem,0.5vw+0.875rem,1.125rem)] px-2 md:px-0 font-sans text-[#6C6C6C] max-w-xl mb-12">
         Explore our insights into the era of ecosystems. Here, we share ideas
         that challenge assumptions and redefine paradigms:
       </p>
@@ -140,16 +140,16 @@ export default function TrendingBlogs() {
             <div className="p-6 flex flex-col flex-1">
               <h3
                 id={`blog-title-${idx}`}
-                className="text-black font-sora font-semibold text-lg md:text-xl mb-2 leading-snug"
+                className="text-black font-serif font-semibold text-lg md:text-xl mb-2 leading-snug"
               >
                 {blog.title}
               </h3>
-              <div className="text-[#5C5E60] font-league-spartan font-normal text- md:text-lg mb-4 flex-1">
+              <div className="text-[#5C5E60] font-sans font-normal text-[clamp(1rem,0.5vw+0.875rem,1.125rem)] mb-4 flex-1">
                 {blog.desc}
               </div>
               <div className="flex items-center justify-between mt-auto">
                 <span
-                  className="bg-gray-100 text-[#7B808A] text-sm font-league-spartan font-medium px-3 py-1 rounded"
+                  className="bg-gray-100 text-[#7B808A] text-sm font-sans font-medium px-3 py-1 rounded"
                   aria-label={`Blog category: ${blog.tag}`}
                 >
                   {blog.tag}
@@ -158,7 +158,7 @@ export default function TrendingBlogs() {
                   href={blog.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#545CF6] font-semibold text-lg md:text-xl flex items-center gap-1 hover:underline transition "
+                  className="text-[#545CF6] font-semibold text-lg md:text-xl font-sans flex items-center gap-1 hover:underline transition "
                   aria-label={`Read full article: ${blog.title}`}
                 >
                   Read More
@@ -188,7 +188,7 @@ export default function TrendingBlogs() {
 
       <button
         onClick={() => setShowAll(!showAll)}
-        className="mt-8 bg-[#545CF6] font-semibold text-xl text-white px-10 py-3 rounded-full shadow hover:bg-[#545CF6] transition focus:outline-none "
+        className="mt-8 bg-[#545CF6] font-semibold  text-white px-10 py-3 rounded-full shadow hover:bg-[#545CF6] transition focus:outline-none font-sans  text-[clamp(0.875rem,2vw+0.5rem,1.25rem)] "
         aria-label={showAll ? "Show less blog posts" : "View all blog posts and articles"}
       >
         {showAll ? "Show Less" : "View All"}
