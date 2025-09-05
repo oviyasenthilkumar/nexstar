@@ -55,7 +55,7 @@ export default function OurAchievements() {
           </div>
 
           {/* Buttons Section - Moved to top */}
-          <div className="absolute top-113 sm:top-40 md:top-140 lg:top-180 2xl:top-180 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row justify-center items-center gap-7 sm:gap-6 md:gap-8 px-4 z-20 w-full max-w-xs sm:max-w-none">
+          <div className="absolute top-120 sm:top-40 md:top-140 lg:top-180 2xl:top-180 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row justify-center items-center gap-7 sm:gap-6 md:gap-8 px-4 z-20 w-full max-w-xs sm:max-w-none">
             <a
               href="https://www.linkedin.com/in/miguel-angel-arce-96693954/"
               target="_blank"
@@ -95,7 +95,7 @@ export default function OurAchievements() {
         >
           {/* Central Globe */}
           <div className="relative w-full flex flex-col justify-center items-center mt-[-80px] sm:mt-0">
-            <div className="w-64 sm:w-80 md:w-96 lg:w-[700px] 2xl:w-[700px] h-99 sm:h-90 md:h-118 lg:h-[700px] 2xl:h-[700px] rounded-full flex items-center justify-center">
+            <div className="w-64 sm:w-80 md:w-96 lg:w-[700px] 2xl:w-[700px] h-110 sm:h-90 md:h-118 lg:h-[700px] 2xl:h-[700px] rounded-full flex items-center justify-center">
               {" "}
               <Image
                 src="/images/globe-removebg-preview.png"
@@ -210,7 +210,7 @@ export default function OurAchievements() {
             </div>
           </div>
 
-          <div className="absolute top-144 sm:top-40 md:top-145 lg:top-115 2xl:top-114 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row justify-center items-center gap-7 sm:gap-6 md:gap-8 px-4 z-20 w-full max-w-xs sm:max-w-none">
+          <div className="absolute top-138 sm:top-40 md:top-145 lg:top-115 2xl:top-114 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row justify-center items-center gap-7 sm:gap-6 md:gap-8 px-4 z-20 w-full max-w-xs sm:max-w-none">
             <a
               href="/ebook/book.pdf"
               target="_blank"
