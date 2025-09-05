@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -15,67 +16,43 @@ const faqs = [
   {
     question: "What does NexStar Consulting do?",
     answer:
-      "We help owners move from operator to owner: align strategy and value proposition, design replicable systems, digitize on Zoho, automate with RPA, and apply AI only where it lifts KPIs—so growth is predictable and governed by data.",
+      "We help owners transition from operator to owner by aligning strategy, designing scalable systems, digitizing on Zoho, automating with RPA, and applying AI where it improves KPIs—so growth is predictable and data-driven.",
     category: ["all", "platform"],
   },
   {
     question: "What is the BOSZ Method?",
     answer:
-      "Business Operating System for Zoho—a practical framework with SOPs, dashboards, and governance to run by numbers. Implemented in four steps: Diagnose → Pilot → Scale → Operate.",
+      "The Business Operating System for Zoho (BOSZ) is a practical framework with SOPs, dashboards, and governance to run your business by the numbers. It is implemented in four steps: Diagnose → Pilot → Scale → Operate.",
     category: ["all", "solutions"],
   },
   {
     question: "Do you offer Zoho implementation and customization?",
     answer:
-      "Yes. CRM, Books, Desk, Analytics, and Creator: design, migrations, integrations, automation, training, and ongoing support.",
+      "Yes. We provide end-to-end implementation and customization for Zoho CRM, Books, Desk, Analytics, and Creator—including design, migration, integration, automation, training, and ongoing support.",
     category: ["all", "solutions", "integrations"],
   },
   {
     question:
       "Where are you based, and do you serve clients globally?",
     answer:
-      "We operate remotely and serve clients across the Americas, Europe, and APAC. English and Spanish.",
+      "We are based in Dubai and serve clients worldwide—remote-first, with on-site support as needed. English and Spanish supported.",
     category: ["all", "platform", "solutions"],
   },
   {
     question: "Can I try your services before committing?",
     answer:
-      " Yes. Start with a 30-minute Discovery Call and a 10–14 day diagnostic (capability map, baseline KPIs, roadmap). Optional 30–60 day pilot with defined deliverables.",
+      "Yes. Start with a 30-minute Discovery Call and a 10–14 day diagnostic (capability map, baseline KPIs, roadmap). If it's a fit, we offer an optional 30–60 day pilot with defined deliverables.",
     category: ["all", "trial"],
   },
-  {
-    question: "How do your integrations work?",
-    answer:
-      " Zoho as the backbone; we connect ERP/accounting, support, and marketing via APIs/middleware. We document SOPs, ensure security, and measure impact on KPIs.",
-    category: ["all", "trial"],
-  },
-  {
-    question: "Where is NexStar Consulting based, and do you serve clients globally? ",
-    answer:
-      " We are Dubai-based and serve clients worldwide—remote-first, with on-site support as needed.",
-    category: ["all", "solutions"],
-  },
-  {
-    question: "Can I try your services before committing? ",
-    answer:
-      "  Yes. Start with a 30-minute Discovery Call, followed by a 10–14 day Diagnostic (capability map, baseline KPIs, roadmap). If it's a fit, we run an optional 30–60 day Pilot with fixed scope/price and exit criteria tied to 2–3 KPIs. Guided Zoho demo/sandbox available on request",
-    category: ["all", "solutions"],
-  },
-  {
-    question: "Do you offer Zoho implementation and customization? ",
-    answer:
-      "Yes—end-to-end across CRM, Books, Desk, Analytics, Creator. We design processes, configure/customize, migrate data, integrate third-party apps, automate (workflows/RPA), train users, and provide ongoing support—always tied to measurable KPIs.",
-    category: ["all", "integrations"],
-  },
+  // Removed duplicate/overlapping integration FAQ
+  // Removed duplicate location/global service FAQ
+  // Removed duplicate trial FAQ
+  // Removed duplicate Zoho implementation FAQ
   {
     question: "How do your integrations work?",
     answer: [
-      "Discover & map: systems, objects/fields, volumes, events, KPIs.",
-      "Design: API contracts, auth (OAuth 2.0), latency/throughput, error policy, data model.",
-      "Build: APIs/webhooks, Zoho Functions/Deluge, iPaaS (Make/Zapier) or custom middleware; RPA where APIs don't exist.",
-      "Migrate & test: cleanse/dedupe, sandbox tests, parallel run, rollback plan.",
-      "Secure & govern: least-privilege access, encryption in transit/at rest, audit logs, SOPs/runbooks.",
-      "Monitor & support: health dashboards, alerts/retries, SLAs."
+      "We use Zoho as the backbone, connecting ERP/accounting, support, and marketing systems via APIs or middleware.",
+      "Our process: Discover & map systems, design API contracts, build integrations (APIs/webhooks, Zoho Functions, iPaaS), migrate & test data, secure & govern access, and monitor with dashboards and alerts."
     ],
     category: ["all", "integrations"],
   },
@@ -109,27 +86,15 @@ export default function Answers() {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center py-10">
-        <span className="font-urbanist mb-4 rounded-md bg-white/20 px-4 py-1 text-base font-semibold tracking-widest text-white">
+        <span className="font-serif mb-4 rounded-md bg-white/20 px-4 py-1 text-base font-semibold tracking-widest text-white">
           FAQs
         </span>
-        <h2
-          id="faq-heading"
-          className="
-            mb-4
-            text-center
-            font-[Sora]
-            font-semibold
-            text-[28px] sm:text-[36px] md:text-[48px]
-            leading-[36px] sm:leading-[48px] md:leading-[60px]
-            tracking-[0%]
-            text-white
-            opacity-100
-            w-full sm:w-[90%] md:w-[549px] mx-auto
-            whitespace-normal md:whitespace-nowrap
-          "
-        >
-          We've <span className="text-gray-300">All The Answers</span>
-        </h2>
+        <h1
+              id="achievements-heading"
+              className="text-2xl text-center max-w-prose sm:text-3xl md:text-5xl lg:text-5xl max-w-7xl mx-auto 3xl:text-[clamp(2.25rem,2vw+1.5rem,3rem)] font-semibold mb-4 sm:mb-6 font-serif bg-gradient-to-r from-white via-gray-400 to-white bg-clip-text text-transparent "
+            >
+              How we Work:<br></br> Questions & Answers
+            </h1>
 
         <div 
           className="mb-10 flex flex-wrap justify-center gap-4"
@@ -144,7 +109,7 @@ export default function Answers() {
                 rounded-full border border-white/30
                 px-6 py-2
                 text-center
-                font-[League_Spartan]
+                font-[sans]
                 font-normal
                 text-[16px] sm:text-[18px]
                 leading-[100%]
@@ -186,7 +151,7 @@ export default function Answers() {
                 aria-controls={`faq-answer-${idx}`}
                 aria-label={`${openIndex === idx ? 'Hide' : 'Show'} answer for: ${faq.question}`}
               >
-                <span className="text-lg md:text-xl font-league-spartan font-semibold">{faq.question}</span>
+                <span className="text-lg md:text-xl 3xl:text-[clamp(1rem,0.5vw+0.875rem,1.125rem)] font-sans font-semibold">{faq.question}</span>
                 <div className="flex-shrink-0">
                   <svg
                     className={`h-8 w-8 transform transition-transform duration-300 ${
@@ -210,7 +175,7 @@ export default function Answers() {
               {openIndex === idx && faq.answer && (
                 <div 
                   id={`faq-answer-${idx}`}
-                  className="px-8 pb-6 text-base md:text-lg text-[#D2CCE8]"
+                  className="px-8 pb-6 max-w-prose text-base 3xl:text-[clamp(1rem,0.5vw+0.875rem,1.125rem)] font-sans text-[#D2CCE8]"
                   role="region"
                   aria-labelledby={`faq-question-${idx}`}
                 >
