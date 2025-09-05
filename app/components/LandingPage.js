@@ -50,7 +50,7 @@ export default function Home() {
 
           {/* Hero Section: Now occupies the full 12 columns of our grid. */}
           <section
-            className="col-span-12 pt-15 sm:pt-6 md:pt-18 lg:pt-30 2xl:pt-28 3xl:pt-60 text-center"
+            className="col-span-12 pt-19 sm:pt-6 md:pt-18 lg:pt-30 2xl:pt-28 3xl:pt-60 text-center"
             aria-labelledby="hero-heading"
           >
             {/* We can nest grids for finer control. Here we center the text content. */}
