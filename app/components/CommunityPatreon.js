@@ -1,7 +1,7 @@
 export default function CommunityPatreon() {
     return (
       <section id="community" className="w-full py-10 bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center" style={{backgroundImage: "url('/images/blackbg.webp')"}}>
-        <div className="flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-center">
+        <div className=" px-3 flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-center">
           <h1
               id="achievements-heading"
               className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl max-w-7xl mx-auto 3xl:text-[clamp(2.25rem,2vw+1.5rem,3rem)] font-semibold mb-4 sm:mb-6 font-serif bg-gradient-to-r from-white via-gray-400 to-white bg-clip-text text-transparent"
