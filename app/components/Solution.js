@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Solution = () => {
   return (
     <div 
-      className="relative min-h-[85vh] sm:min-h-[75vh] md:min-h-[50vh] lg:min-h-[85vh] xl:min-h-[100vh] 2xl:min-h-[90vh] 3xl:min-h-[75vh] overflow-hidden flex items-start justify-center bg-cover bg-center bg-no-repeat pt-20 bg-gradient-to-b from-black/40 via-black/20 to-transparent 
+      className="relative min-h-[90vh] sm:min-h-[75vh] md:min-h-[50vh] lg:min-h-[85vh] xl:min-h-[100vh] 2xl:min-h-[90vh] 3xl:min-h-[75vh] overflow-hidden flex items-start justify-center bg-cover bg-center bg-no-repeat pt-20 bg-gradient-to-b from-black/40 via-black/20 to-transparent 
       bg-[url('/images/blackbg.png')]"
     >
       {/* Dark overlay for better text readability */}
